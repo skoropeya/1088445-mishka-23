@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Екатерина Олениченко](https://up.htmlacademy.ru/adaptive/23/user/1088445).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Иовлев](https://htmlacademy.ru/profile/skywalker).
 
 ---
 
