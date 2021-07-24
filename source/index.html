@@ -17,37 +17,39 @@
       <nav class="main-nav">
         <!-- main-nav__toggle только для мобильной версии -->
         <!-- main-nav__toggle--opened для открытого меню-->
-        <button class="main-nav__toggle main-nav__toggle--opened" type="button"><span class="visually-hidden">Открыть
-            меню</span></button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--catalog">
+        <button class="main-nav__toggle main-nav__toggle--opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--catalog">
             <a href="#">Каталог товаров</a>
           </li>
-          <li class="site-list__item site-list__item--order">
+          <li class="main-nav__item main-nav__item--order">
             <a href="#">Вязание на заказ</a>
           </li>
-          <li class="site-list__item site-list__item--search">
+          <li class="main-nav__item main-nav__item--search">
             <a href="#">
-              <!-- <svg class="site-list__icon"></svg> -->
-              Поиск по сайту
+              <!-- <svg class="main-nav__icon"></svg> -->
+              <form class="main-nav__form form-search" action="https://echo.htmlacademy.ru" method="GET">
+                <label class="visually-hidden" for="search-message">Поиск</label>
+                <input class="form-search__message" type="search" name="search-message" id="search-message" placeholder="Поиск по сайту">
+              </form>
             </a>
           </li>
-          <li class="site-list__item site-list__item--cart">
+          <li class="main-nav__item main-nav__item--cart">
             <a href="#">
-              <!-- <svg class="site-list__icon"></svg> -->
-              Корзина: <span class="site-list__content-cart">пока пуста</span>
+              <!-- <svg class="main-nav__icon"></svg> -->
+              Корзина: <span class="main-nav__content-cart">пока пуста</span>
             </a>
           </li>
         </ul>
       </nav>
 
-      <!-- для мобильной версии блок скрыт, отображается только для tablet и desktop -->
+      <!-- link-list для мобильной версии блок скрыт, отображается только для tablet и desktop -->
       <ul class="page-header__links link-list">
-        <!-- только для desktop -->
+        <!-- link-list__item--arrival только для desktop -->
         <li class="link-list__item link-list__item--arrival">
           <a href="#">Новые поступления</a>
         </li>
-        <!-- только для desktop -->
+        <!-- link-list__item--sale только для desktop -->
         <li class="link-list__item link-list__item--sale">
           <a href="#">Распродажа</a>
         </li>
@@ -83,10 +85,8 @@
 
         <div class="product-week__card product">
           <h3 class="product__name">Вязаные корзинки</h3>
-          <img class="product__image" src="./img/triple-set.png" width="260" height="315"
-            alt="Три вязаные корзинки разных размеров">
-          <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх
-            размерах.</p>
+          <img class="product__image" src="./img/triple-set.png" width="260" height="315" alt="Три вязаные корзинки разных размеров">
+          <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
           <dl class="product__features">
             <div class="product__feature">
               <dt class="product__color">Цвет:</dt>
@@ -134,9 +134,7 @@
           <!-- slider__item--opened  открытый слайд -->
           <li class="slider__item slider__item--opened">
             <blockquote class="slider__quote quote">
-              <p class="quote__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
-                лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
-                фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              <p class="quote__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
               <cite class="quote__author">Анастасия Красильникова</cite>
               <p class="quote__link">@misssssiskras</p>
             </blockquote>
@@ -144,9 +142,7 @@
           <!-- скрытый слайд -->
           <li class="slider__item">
             <blockquote class="slider__quote quote">
-              <p class="quote__text">Я сестра молодой маы, но всё равно фотографии не набирали и близко такого
-                количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
-                и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              <p class="quote__text">Я сестра молодой маы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
               <cite class="quote__author">Екатерина Красильникова</cite>
               <p class="quote__link">@misssssiskras2</p>
             </blockquote>
@@ -154,9 +150,7 @@
           <!-- скрытый слайд -->
           <li class="slider__item">
             <blockquote class="slider__quote quote">
-              <p class="quote__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко
-                такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в
-                Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              <p class="quote__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
               <cite class="quote__author">Елена Красильникова</cite>
               <p class="quote__link">@misssssiskras3</p>
             </blockquote>
@@ -184,8 +178,7 @@
           </dd>
         </dl>
 
-        <img class="contact__map" src="./img/map-1@1x.png"
-          alt="Адрес магазина на карте г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
+        <img class="contact__map" src="./img/map-1@1x.png" alt="Адрес магазина на карте г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
 
         <a class="contact__write button" href="#">Напишите нам</a>
 
@@ -237,23 +230,23 @@
   <section class="modal">
 
     <h2 class="modal__title">Добавить в корзину</h2>
-    <form class="modal__form size-selection" action="https://echo.htmlacademy.ru" method="GET">
-      <p class="size-selection__note">Выберите размер:</p>
-      <ul class="size-selection__list">
-        <li class="size-selection__item">
-          <label class="size-selection__label" for="size-s">S</label>
-          <input class="size-selection__radio" type="radio" name="selected-size" id="size-s" value="size-s">
+    <form class="modal__form form-size" action="https://echo.htmlacademy.ru" method="GET">
+      <p class="form-size__note">Выберите размер:</p>
+      <ul class="form-size__list">
+        <li class="form-size__item">
+          <label class="form-size__label" for="size-s">S</label>
+          <input class="form-size__radio" type="radio" name="selected-size" id="size-s" value="size-s">
         </li>
-        <li class="size-selection__item">
-          <label class="size-selection__label" for="size-m">M</label>
-          <input class="size-selection__radio" type="radio" name="selected-size" id="size-m" value="size-m">
+        <li class="form-size__item">
+          <label class="form-size__label" for="size-m">M</label>
+          <input class="form-size__radio" type="radio" name="selected-size" id="size-m" value="size-m">
         </li>
-        <li class="size-selection__item">
-          <label class="size-selection__label" for="size-s">L</label>
-          <input class="size-selection__radio" type="radio" name="selected-size" id="size-l" value="size-l">
+        <li class="form-size__item">
+          <label class="form-size__label" for="size-l">L</label>
+          <input class="form-size__radio" type="radio" name="selected-size" id="size-l" value="size-l">
         </li>
       </ul>
-      <button class="size-selection__add" type="submit">Добавить</button>
+      <button class="form-size__add" type="submit">Добавить</button>
     </form>
 
   </section>
