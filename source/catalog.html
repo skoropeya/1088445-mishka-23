@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+
+<body class="page-body">
+
+  <header class="page-header">
+    <div class="page-header__container">
+      <a class="page-header__logo">
+        <img src="./img/mishka-logo-1.svg" width="86" height="35" alt="Логотип магазина Мишка">
+      </a>
+
+      <nav class="main-nav">
+        <!-- main-nav__toggle только для мобильной версии -->
+        <!-- main-nav__toggle--opened для открытого меню-->
+        <button class="main-nav__toggle main-nav__toggle--opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--catalog">
+            <a href="#">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item main-nav__item--order">
+            <a href="#">Вязание на заказ</a>
+          </li>
+          <li class="main-nav__item main-nav__item--search">
+            <a href="#">
+              <!-- <svg class="main-nav__icon"></svg> -->
+              Поиск по сайту
+            </a>
+          </li>
+          <li class="main-nav__item main-nav__item--cart">
+            <a href="#">
+              <!-- <svg class="main-nav__icon"></svg> -->
+              Корзина: <span class="main-nav__content-cart">пока пуста</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- link-list для мобильной версии блок скрыт, отображается только для tablet и desktop -->
+      <ul class="page-header__links link-list">
+        <!-- link-list__item--arrival только для desktop -->
+        <li class="link-list__item link-list__item--arrival">
+          <a href="#">Новые поступления</a>
+        </li>
+        <!-- link-list__item--sale только для desktop -->
+        <li class="link-list__item link-list__item--sale">
+          <a href="#">Распродажа</a>
+        </li>
+        <li class="link-list__item link-list__item--delivery">
+          <a href="#">Бесплатная доставка по России</a>
+        </li>
+      </ul>
+
+    </div>
+  </header>
+
+
+  <main class="page-main">
+    <h1 class="visually-hidden">Магазин товаров для дома Мишка: каталог</h1>
+
+
+  </main>
+
+
+  <footer class="page-footer">
+    <div class="page-footer__container">
+
+      <!-- page-footer__logo для мобильной версии элемент скрыт -->
+      <a class="page-footer__logo" href="#"><img src="./img/mishka-logo-footer.png" alt=""></a>
+
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#">
+            <span class="visually-hidden">Instagram</span>
+            <!-- <svg class="social__icon"></svg> -->
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#">
+            <span class="visually-hidden">Facebook</span>
+            <!-- <svg class="social__icon"></svg> -->
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#">
+            <span class="visually-hidden">Twitter</span>
+            <!-- <svg class="social__icon"></svg> -->
+          </a>
+        </li>
+      </ul>
+
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+          <!-- <svg class="copyright__icon"></svg> -->
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <section class="modal">
+
+    <h2 class="modal__title">Добавить в корзину</h2>
+    <form class="modal__form form-size" action="https://echo.htmlacademy.ru" method="GET">
+      <p class="form-size__note">Выберите размер:</p>
+      <ul class="form-size__list">
+        <li class="form-size__item">
+          <label class="form-size__label" for="size-s">S</label>
+          <input class="form-size__radio" type="radio" name="selected-size" id="size-s" value="size-s">
+        </li>
+        <li class="form-size__item">
+          <label class="form-size__label" for="size-m">M</label>
+          <input class="form-size__radio" type="radio" name="selected-size" id="size-m" value="size-m">
+        </li>
+        <li class="form-size__item">
+          <label class="form-size__label" for="size-l">L</label>
+          <input class="form-size__radio" type="radio" name="selected-size" id="size-l" value="size-l">
+        </li>
+      </ul>
+      <button class="form-size__add" type="submit">Добавить</button>
+    </form>
+
+  </section>
+
+</body>
+
+</html>
