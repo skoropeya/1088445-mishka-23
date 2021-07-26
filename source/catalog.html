@@ -60,8 +60,56 @@
 
 
   <main class="page-main">
-    <h1 class="visually-hidden">Магазин товаров для дома Мишка: каталог</h1>
 
+    <div class="page-main__container">
+      <h1 class="page-main__title heading-primary">Каталог товаров</h1>
+    </div>
+
+    <section class="catalog">
+      <div>
+
+        <h2 class="visually-hidden">Список товаров</h2>
+
+        <ul class="catalog__list">
+          <li class="catalog__item card">
+            <a href="#"><h3 class="card__title">Зайчик-попрыгайчик</h3></a>
+            <a href="#"><img class="card__img" src="./img/goods/photo-1-m.jpg" width="260" height="195" alt="Вязаный заяц в голубой пижаме"></a>
+            <p class="card__description">Рост 30 см, вес 200 г</p>
+            <p class="card__price"><span class="card__price-value">1 200</span> руб.</p>
+            <button class="card__add-cart" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
+          </li>
+          <li class="catalog__item card">
+            <a href="#"><h3 class="card__title">Корзинка для белья</h3></a>
+            <a href="#"><img class="card__img" src="./img/goods/photo-2-m.jpg" width="260" height="195" alt="Вязаная бело-розовая корзина с бельем"></a>
+            <p class="card__description">Диаметр 15 см, высота 10 см</p>
+            <p class="card__price"><span class="card__price-value">690</span> руб.</p>
+            <button class="card__add-cart" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
+          </li>
+          <li class="catalog__item card">
+            <a href="#"><h3 class="card__title">Большая корзинка для игрушек</h3></a>
+            <a href="#"><img class="card__img" src="./img/goods/photo-3-m.jpg" width="260" height="195" alt="Вязаная бело-зеленая корзина с игрушками"></a>
+            <p class="card__description">Диаметр 30 см, высота 30 см</p>
+            <p class="card__price"><span class="card__price-value">1 500</span> руб.</p>
+            <button class="card__add-cart" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="process_container">
+
+        <h2 class="process__title">Процесс производства</h2>
+
+        <figure class="process__video video-demo">
+          <img class="video-demo__preview" src="./img/video-1.jpg" width="260" height="150" alt="Превью видеоролика о производстве">
+          <figcaption class="video-demo__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</figcaption>
+        </figure>
+
+        <a class="process__order button" href="#">Сделать заказ</a>
+      </div>
+    </section>
 
   </main>
 
