@@ -1,12 +1,29 @@
-.page-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 18px;
   line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
   color: @color-text;
-  background-color: @color-white;
-  min-height: 100%;
+  background-color: transparent;
+  border: 2px solid @color-text;
+
+  &:hover,
+  &:focus {
+    padding: 14px;
+    color: @color-white;
+    background: linear-gradient(0deg, @color-text, @color-text);
+    border: none;
+  }
+
+  &:active {
+    padding: 14px;
+    color: rgba(@color-white-rgb, 0.3);
+    background: linear-gradient(0deg, @color-text, @color-text);
+    border: none;
+  }
 }

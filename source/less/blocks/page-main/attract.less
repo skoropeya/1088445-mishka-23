@@ -1,12 +1,26 @@
-.page-body {
+.attract {
+  background-image: url("../img/attract-bg-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.attract__title {
   margin: 0;
-  padding: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 20px;
-  color: @color-text;
-  background-color: @color-white;
-  min-height: 100%;
+}
+
+.attract__category {
+  display: block;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: @color-white;
+  text-decoration: none;
+
+  &--interior {
+    background-color: @color-accent1;
+  }
+
+  &--toy {
+    background-color: @color-accent2;
+  }
 }

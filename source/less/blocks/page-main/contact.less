@@ -1,12 +1,38 @@
-.page-body {
+.contact__title {
   margin: 0;
-  padding: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+}
+
+.contact__info {
+  margin: 0;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 30px;
   color: @color-text;
-  background-color: @color-white;
-  min-height: 100%;
+
+  dd {
+    margin: 0;
+  }
+}
+
+.contact__email-value {
+  a {
+    color: @color-text;
+    text-decoration-color: @underline;
+
+    &:hover,
+    &:focus {
+      color: @mail-hover;
+      text-decoration-color: @mail-hover;
+    }
+
+    &:active {
+      color: @mail-hover;
+      text-decoration-color: rgba(@mail-hover-rgb, 0.1);
+    }
+  }
+}
+
+.contact__address-value {
+  address {
+    font-style: normal;
+  }
 }

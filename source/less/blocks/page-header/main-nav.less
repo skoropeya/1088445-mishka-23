@@ -1,0 +1,45 @@
+.main-nav {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.main-nav__toggle {
+  display: block;
+  padding: 0;
+  width: 21px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--opened {
+    background-image: url("../img/icon/icon-menu-close.svg");
+  }
+
+  &--closed {
+    background-image: url("../img/icon/icon-menu.svg");
+  }
+}
+
+.main-nav__list {
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  a {
+    color: @color-black;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
