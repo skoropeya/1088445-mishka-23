@@ -11,13 +11,14 @@
 
   <header class="page-header">
     <div class="page-header__container container">
-      <a class="page-header__logo" href="index.html">
-        <img src="./img/mishka-logo-1.svg" width="86" height="35" alt="Логотип магазина Мишка">
+      <a class="page-header__link-logo" href="index.html">
+        <img class="page-header__logo" src="./img/mishka-logo-1.svg" width="86" height="35" alt="Логотип магазина Мишка">
       </a>
 
-      <nav class="main-nav">
+      <nav class="page-header__nav main-nav">
         <!-- main-nav__toggle только для мобильной версии -->
         <!-- main-nav__toggle--opened для открытого меню-->
+        <!-- main-nav__toggle--closed для закрытого меню-->
         <button class="main-nav__toggle main-nav__toggle--opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--catalog">
@@ -62,8 +63,10 @@
 
   <main class="page-main">
 
-    <div class="page-main__container container">
-      <h1 class="page-main__title heading-primary">Каталог товаров</h1>
+    <div class="page-main__color-box">
+      <div class="page-main__container container">
+        <h1 class="page-main__title heading-primary">Каталог товаров</h1>
+      </div>
     </div>
 
     <section class="catalog">
@@ -73,25 +76,31 @@
 
         <ul class="catalog__list">
           <li class="catalog__item card">
-            <h3 class="card__title"><a href="#">Зайчик-попрыгайчик</a></h3>
+            <div class="card__border-box">
+              <h3 class="card__title"><a href="#">Зайчик-попрыгайчик</a></h3>
+              <p class="card__description">Рост 30 см, вес 200 г</p>
+              <p class="card__price"><span class="card__price-value">1 200</span> руб.</p>
+              <button class="card__add-cart" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
+            </div>
             <a class="card__link-img" href="#"><img class="card__img" src="./img/goods/photo-1-m.jpg" width="260" height="195" alt="Вязаный заяц в голубой пижаме"></a>
-            <p class="card__description">Рост 30 см, вес 200 г</p>
-            <p class="card__price"><span class="card__price-value">1 200</span> руб.</p>
-            <button class="card__add-cart" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
           </li>
           <li class="catalog__item card">
-            <h3 class="card__title"><a href="#">Корзинка для белья</a></h3>
+            <div class="card__border-box">
+              <h3 class="card__title"><a href="#">Корзинка для белья</a></h3>
+              <p class="card__description">Диаметр 15 см, высота 10 см</p>
+              <p class="card__price"><span class="card__price-value">690</span> руб.</p>
+              <button class="card__add-cart" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
+            </div>
             <a class="card__link-img" href="#"><img class="card__img" src="./img/goods/photo-2-m.jpg" width="260" height="195" alt="Вязаная бело-розовая корзина с бельем"></a>
-            <p class="card__description">Диаметр 15 см, высота 10 см</p>
-            <p class="card__price"><span class="card__price-value">690</span> руб.</p>
-            <button class="card__add-cart" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
           </li>
           <li class="catalog__item card">
-            <h3 class="card__title"><a href="#">Большая корзинка для игрушек</a></h3>
+            <div class="card__border-box">
+              <h3 class="card__title"><a href="#">Большая корзинка для игрушек</a></h3>
+              <p class="card__description">Диаметр 30 см, высота 30 см</p>
+              <p class="card__price"><span class="card__price-value">1 500</span> руб.</p>
+              <button class="card__add-cart" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
+            </div>
             <a class="card__link-img" href="#"><img class="card__img" src="./img/goods/photo-3-m.jpg" width="260" height="195" alt="Вязаная бело-зеленая корзина с игрушками"></a>
-            <p class="card__description">Диаметр 30 см, высота 30 см</p>
-            <p class="card__price"><span class="card__price-value">1 500</span> руб.</p>
-            <button class="card__add-cart" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
           </li>
         </ul>
 
@@ -100,17 +109,17 @@
 
     <section class="process">
       <div class="process__container container">
+        <div class="process__border-box">
+          <h2 class="process__title">Процесс производства</h2>
 
-        <h2 class="process__title">Процесс производства</h2>
+          <figure class="process__video video-demo">
+            <img class="video-demo__preview" src="./img/video-1.jpg" width="260" height="150" alt="Превью видеоролика о производстве">
+            <button class="video-demo__play"><span class="visually-hidden">Смотреть видео</span></button>
+            <figcaption class="video-demo__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</figcaption>
+          </figure>
 
-        <figure class="process__video video-demo">
-          <img class="video-demo__preview" src="./img/video-1.jpg" width="260" height="150" alt="Превью видеоролика о производстве">
-          <button class="video-demo__play"><span class="visually-hidden">Смотреть видео</span></button>
-          <figcaption class="video-demo__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</figcaption>
-        </figure>
-
-        <a class="process__order button" href="#">Сделать заказ</a>
-
+          <a class="process__order button" href="#">Сделать заказ</a>
+        </div>
       </div>
     </section>
 
@@ -118,44 +127,49 @@
 
 
   <footer class="page-footer">
-    <div class="page-footer__container container">
+    <div class="page-footer__color-box">
+      <div class="page-footer__container container">
 
-      <!-- page-footer__logo для мобильной версии элемент скрыт -->
-      <a class="page-footer__logo" href="#"><img src="./img/mishka-logo-footer.png" alt=""></a>
+        <!-- page-footer__logo для мобильной версии элемент скрыт -->
+        <a class="page-footer__logo" href="#"><img src="./img/mishka-logo-footer.png" alt=""></a>
 
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="#">
-            <span class="visually-hidden">Instagram</span>
-            <!-- <svg class="social__icon"></svg> -->
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">
-            <span class="visually-hidden">Facebook</span>
-            <!-- <svg class="social__icon"></svg> -->
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="#">
-            <span class="visually-hidden">Twitter</span>
-            <!-- <svg class="social__icon"></svg> -->
-          </a>
-        </li>
-      </ul>
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#">
+              <span class="visually-hidden">Instagram</span>
+              <!-- <svg class="social__icon"></svg> -->
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">
+              <span class="visually-hidden">Facebook</span>
+              <!-- <svg class="social__icon"></svg> -->
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#">
+              <span class="visually-hidden">Twitter</span>
+              <!-- <svg class="social__icon"></svg> -->
+            </a>
+          </li>
+        </ul>
 
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="visually-hidden">HTML Academy</span>
-          <!-- <svg class="copyright__icon"></svg> -->
-        </a>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано:</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">HTML Academy</span>
+            <!-- <svg class="copyright__icon"></svg> -->
+          </a>
+        </div>
+
       </div>
-
     </div>
+
   </footer>
 
-  <section class="modal">
+  <!-- modal--closed если окно закрыто -->
+  <!-- modal--opened если окно открыто -->
+  <section class="modal modal--opened">
 
     <h2 class="modal__title">Добавить в корзину</h2>
     <form class="modal__form form-size" action="https://echo.htmlacademy.ru" method="GET">

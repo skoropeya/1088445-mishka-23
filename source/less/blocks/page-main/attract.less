@@ -1,26 +1,38 @@
 .attract {
+  padding-top: 80px;
   background-image: url("../img/attract-bg-1.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
 }
 
 .attract__title {
   margin: 0;
+  margin-bottom: 116px;
+}
+
+.attract__color-box {
+  &--accent1 {
+    background-color: @color-accent1;
+  }
+
+  &--accent2 {
+    background-color: @color-accent2;
+  }
 }
 
 .attract__category {
   display: block;
+  padding-top: 24px;
+  padding-bottom: 31px;
+  padding-right: 130px;
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
   color: @color-white;
   text-decoration: none;
 
-  &--interior {
-    background-color: @color-accent1;
-  }
-
-  &--toy {
-    background-color: @color-accent2;
+  &:hover,
+  &:focus {
+    padding-bottom: 36px;
   }
 }

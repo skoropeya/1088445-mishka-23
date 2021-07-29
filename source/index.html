@@ -11,15 +11,15 @@
 
   <header class="page-header">
     <div class="page-header__container container">
-      <a class="page-header__logo">
-        <img src="./img/mishka-logo-1.svg" width="86" height="35" alt="Логотип магазина Мишка">
+      <a class="page-header__link-logo">
+        <img class="page-header__logo" src="./img/mishka-logo-1.svg" width="86" height="35" alt="Логотип магазина Мишка">
       </a>
 
       <nav class="page-header__nav main-nav">
         <!-- main-nav__toggle только для мобильной версии -->
         <!-- main-nav__toggle--opened для открытого меню-->
         <!-- main-nav__toggle--closed для закрытого меню-->
-        <button class="main-nav__toggle main-nav__toggle--closed" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="main-nav__toggle main-nav__toggle--opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--catalog">
             <a href="catalog.html">Каталог товаров</a>
@@ -66,15 +66,21 @@
 
     <section class="attract">
       <div class="attract__container container">
-
         <h2 class="attract__title heading-primary">Милые штуки ручной работы для дома</h2>
+      </div>
 
-        <div class="attract__categories">
+      <div class="attract__color-box attract__color-box--accent1">
+        <div class="attract__container container">
           <a class="attract__category attract__category--interior" href="#">Предметы интерьера</a>
+        </div>
+      </div>
+
+      <div class="attract__color-box attract__color-box--accent2">
+        <div class="attract__container container">
           <a class="attract__category attract__category--toy" href="#">Детские игрушки</a>
         </div>
-
       </div>
+
     </section>
 
     <section class="product-week">
@@ -162,8 +168,8 @@
     </section>
 
     <section class="contact">
-      <div class="contact__container container">
 
+      <div class="contact__container container">
         <h2 class="contact__title heading-secondary">Контакты</h2>
 
         <dl class="contact__info">
@@ -176,11 +182,13 @@
             <address>г. Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101</address>
           </dd>
         </dl>
+      </div>
 
-        <img class="contact__map" src="./img/map-1@1x.png" alt="Адрес магазина на карте г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
+      <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3050922002319!2d30.322103261212337!3d59.9386103382364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1627546967634!5m2!1sru!2sru" height="454" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+      <!-- <img class="contact__map" src="./img/map-1@1x.png" alt="Адрес магазина на карте г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101"> -->
 
+      <div class="contact__container container">
         <a class="contact__write button" href="#">Напишите нам</a>
-
       </div>
     </section>
 
@@ -189,44 +197,49 @@
 
 
   <footer class="page-footer">
-    <div class="page-footer__container container">
+    <div class="page-footer__color-box">
+      <div class="page-footer__container container">
 
-      <!-- page-footer__logo для мобильной версии элемент скрыт -->
-      <!-- <a class="page-footer__logo" href="#"><img src="./img/mishka-logo-footer.png" alt=""></a> -->
+        <!-- page-footer__logo для мобильной версии элемент скрыт -->
+        <a class="page-footer__logo" href="#"><img src="./img/mishka-logo-footer.png" alt=""></a>
 
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="#">
-            <span class="visually-hidden">Instagram</span>
-            <!-- <svg class="social__icon"></svg> -->
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">
-            <span class="visually-hidden">Facebook</span>
-            <!-- <svg class="social__icon"></svg> -->
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="#">
-            <span class="visually-hidden">Twitter</span>
-            <!-- <svg class="social__icon"></svg> -->
-          </a>
-        </li>
-      </ul>
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#">
+              <span class="visually-hidden">Instagram</span>
+              <!-- <svg class="social__icon"></svg> -->
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">
+              <span class="visually-hidden">Facebook</span>
+              <!-- <svg class="social__icon"></svg> -->
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#">
+              <span class="visually-hidden">Twitter</span>
+              <!-- <svg class="social__icon"></svg> -->
+            </a>
+          </li>
+        </ul>
 
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="visually-hidden">HTML Academy</span>
-          <!-- <svg class="copyright__icon"></svg> -->
-        </a>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано:</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">HTML Academy</span>
+            <!-- <svg class="copyright__icon"></svg> -->
+          </a>
+        </div>
+
       </div>
-
     </div>
+
   </footer>
 
-  <section class="modal">
+  <!-- modal--closed если окно закрыто -->
+  <!-- modal--opened если окно открыто -->
+  <section class="modal modal--opened">
 
     <h2 class="modal__title">Добавить в корзину</h2>
     <form class="modal__form form-size" action="https://echo.htmlacademy.ru" method="GET">

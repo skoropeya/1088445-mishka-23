@@ -17,10 +17,18 @@
 
   &--opened {
     background-image: url("../img/icon/icon-menu-close.svg");
+
+    & + .main-nav__list {
+      display: block;
+    }
   }
 
   &--closed {
     background-image: url("../img/icon/icon-menu.svg");
+
+    & + .main-nav__list {
+      display: none;
+    }
   }
 }
 
