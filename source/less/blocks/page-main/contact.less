@@ -2,20 +2,36 @@
   margin-bottom: 38px;
 }
 
+.contact__container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 .contact__title {
   margin: 0;
+  margin-bottom: 28px;
 }
 
 .contact__info {
   margin: 0;
+  margin-bottom: 60px;
   font-size: 14px;
   line-height: 30px;
   color: @color-text;
 
   dd {
-    margin: 0;
+    margin-left: 30px;
   }
 }
+
+.contact__info-box {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 
 .contact__email-value {
   a {
@@ -44,4 +60,5 @@
 .contact__map {
   display: block;
   width: 100%;
+  margin-bottom: 42px;
 }
