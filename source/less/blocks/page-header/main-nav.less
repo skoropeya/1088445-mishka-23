@@ -1,10 +1,16 @@
 .main-nav {
+  position: absolute;
+  top: 79px;
+  z-index: 1;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
 }
 
 .main-nav__toggle {
+  position: absolute;
+  left: 238px;
+  top: -50px;
   display: block;
   padding: 0;
   width: 21px;
@@ -17,28 +23,36 @@
 
   &--opened {
     background-image: url("../img/icon/icon-menu-close.svg");
-
-    & + .main-nav__list {
-      display: block;
-    }
   }
 
   &--closed {
     background-image: url("../img/icon/icon-menu.svg");
-
-    & + .main-nav__list {
-      display: none;
-    }
   }
 }
 
 .main-nav__list {
+  margin: 0;
+  margin-left: -30px;
   padding: 0;
   list-style: none;
+  width: 320px;
+  background-color: @color-white;
+
+  &--opened {
+    display: block;
+  }
+
+  &--closed {
+    display: none;
+  }
 }
 
 .main-nav__item {
+  box-shadow: 0 1px 0 @light-grey, inset 0 1px 0 @light-grey;
+
   a {
+    display: block;
+    padding: 28px 10px 27px 76px;
     color: @color-black;
     text-decoration: none;
 

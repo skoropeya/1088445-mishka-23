@@ -20,8 +20,10 @@
         <!-- main-nav__toggle только для мобильной версии -->
         <!-- main-nav__toggle--opened для открытого меню-->
         <!-- main-nav__toggle--closed для закрытого меню-->
-        <button class="main-nav__toggle main-nav__toggle--opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list">
+        <button class="main-nav__toggle main-nav__toggle--closed" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <!-- main-nav__list--opened для открытого меню-->
+        <!-- main-nav__list--closed для закрытого меню -->
+        <ul class="main-nav__list main-nav__list--closed">
           <li class="main-nav__item main-nav__item--catalog">
             <a href="catalog.html">Каталог товаров</a>
           </li>
@@ -87,11 +89,11 @@
     <section class="product-week">
       <div class="product-week__container container">
 
-        <h2 class="product-week__title">Товар недели</h2>
+        <h2 class="visually-hidden">Товар недели</h2>
 
         <div class="product-week__card product">
           <h3 class="product__name heading-secondary">Вязаные корзинки</h3>
-          <img class="product__image" src="./img/triple-set.png" width="260" height="315" alt="Три вязаные корзинки разных размеров">
+          <p class="product__mark">Товар недели</p>
           <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
           <dl class="product__features">
             <div class="product__feature">
@@ -107,6 +109,7 @@
               <dd class="product__height-value">15 см</dd>
             </div>
           </dl>
+          <img class="product__image" src="./img/triple-set.png" width="260" height="315" alt="Три вязаные корзинки разных размеров">
           <p class="product__price">Цена: 990 руб.</p>
           <a class="product__make-order button" href="#">Заказать</a>
         </div>
@@ -240,7 +243,7 @@
 
   <!-- modal--closed если окно закрыто -->
   <!-- modal--opened если окно открыто -->
-  <section class="modal modal--opened">
+  <section class="modal modal--closed">
 
     <h2 class="modal__title">Добавить в корзину</h2>
     <form class="modal__form form-size" action="https://echo.htmlacademy.ru" method="GET">
