@@ -247,9 +247,8 @@
 
   </footer>
 
-  <!-- modal--closed если окно закрыто -->
   <!-- modal--opened если окно открыто -->
-  <section class="modal modal--closed">
+  <section class="modal">
 
     <h2 class="modal__title">Добавить в корзину</h2>
     <form class="modal__form form-size" action="https://echo.htmlacademy.ru" method="GET">
@@ -273,6 +272,12 @@
 
   </section>
 
+  <!-- overlay затемняет и блокирует страницу при открытии модального окна -->
+  <!-- page-body__overlay--opened для открытого модального окна -->
+  <div class="page-body__overlay"></div>
+
+  <script src="./js/menu.js"></script>
+  <script src="./js/order.js"></script>
 </body>
 
 </html>

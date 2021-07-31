@@ -10,3 +10,17 @@
   background-color: @color-white;
   min-height: 100%;
 }
+
+.page-body__overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(@color-white-rgb, 0.9);
+
+  &--opened {
+    display: block;
+  }
+}
