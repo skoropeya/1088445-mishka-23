@@ -27,13 +27,11 @@
 .form__text,
 .form__tel {
   padding: 15px 3px 14px 0;
+  font-size: 17px;
+  line-height: 18px;
   color: @color-text;
   border: none;
   box-shadow: inset 0 -2px 0 @color-black;
-
-  &::placeholder {
-    opacity: 0.3;
-  }
 
   &:hover,
   &:focus,
@@ -45,13 +43,10 @@
 
 .form__message {
   padding: 17px;
+  font-size: 17px;
   line-height: 18px;
   color: @color-text;
   border: 2px solid @color-text;
-
-  &::placeholder {
-    opacity: 0.3;
-  }
 
   &:hover,
   &:focus,
@@ -60,6 +55,13 @@
     outline: none;
     border: 2px solid @underline;
   }
+}
+
+.form__text::placeholder,
+.form__tel::placeholder,
+.form__message::placeholder {
+  opacity: 1;
+  color: rgba(@color-black-rgb, 0.3);
 }
 
 .form__note {
