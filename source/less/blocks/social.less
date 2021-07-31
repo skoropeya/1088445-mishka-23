@@ -1,4 +1,19 @@
 .social {
   padding: 0;
   list-style: none;
+  display: flex;
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-right: 36px;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 23px;
+  height: 28px;
+  // потому уберу
+  background-color: #f08080;
 }
