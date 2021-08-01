@@ -1,0 +1,49 @@
+.form-size__note {
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.form-size__list {
+  padding: 0;
+  list-style: none;
+}
+
+.form-size__label {
+  display: block;
+  box-sizing: border-box;
+  width: 82px;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid rgba(@color-text-rgb, 0.1);
+
+  &:hover,
+  &:focus {
+    border-color: rgba(@color-text-rgb, 0.3);
+  }
+
+  &:active {
+    border-color: @color-accent1;
+  }
+}
+
+.form-size__radio:checked + .form-size__label {
+  border-color: @color-accent1;
+}
+
+.form-size__add {
+  padding: 18px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @color-white;
+  background-color: @color-accent1;
+  border: none;
+  cursor: pointer;
+}

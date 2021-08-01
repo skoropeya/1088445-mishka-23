@@ -1,0 +1,58 @@
+.attract {
+  padding-top: 80px;
+  margin-bottom: 30px;
+  background-image: url("../img/attract-bg-1.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.attract__title {
+  margin: 0;
+  margin-bottom: 116px;
+}
+
+.attract__category {
+  display: block;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: @color-white;
+  text-decoration: none;
+
+  &--interior {
+    background-color: @color-accent1;
+
+    &:hover,
+    &:focus {
+      background-color: @block-hover;
+      padding-bottom: 5px;
+      margin-top: -5px;
+    }
+
+    &:active {
+      background-color: @block-hover;
+    }
+  }
+
+  &--toy {
+    background-color: @color-accent2;
+
+    &:hover,
+    &:focus {
+      background-color: @mail-hover;
+      padding-bottom: 5px;
+      margin-top: -5px;
+    }
+
+    &:active {
+      background-color: @mail-hover;
+    }
+  }
+}
+
+.attract__subtitle {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 31px;
+  padding-right: 130px;
+}

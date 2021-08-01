@@ -1,0 +1,29 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @color-text;
+  background-color: transparent;
+  border: 2px solid @color-text;
+
+  &:hover,
+  &:focus {
+    padding: 14px;
+    color: @color-white;
+    background: linear-gradient(0deg, @color-text, @color-text);
+    border: none;
+  }
+
+  &:active {
+    padding: 14px;
+    color: rgba(@color-white-rgb, 0.3);
+    background: linear-gradient(0deg, @color-text, @color-text);
+    border: none;
+  }
+}
