@@ -8,17 +8,36 @@
   align-items: center;
   padding-top: 25px;
   padding-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 51px;
+    padding-bottom: 58px;
+  }
 }
 
 .page-footer__logo {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .page-footer__social {
   margin: 0;
   margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .page-footer__copyright {
   margin-top: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
 }

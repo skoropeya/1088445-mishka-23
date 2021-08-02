@@ -2,11 +2,6 @@
   margin-bottom: 38px;
 }
 
-.contact__container {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
 .contact__title {
   margin: 0;
   margin-bottom: 28px;
@@ -21,6 +16,16 @@
 
   dd {
     margin-left: 30px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
@@ -61,4 +66,18 @@
   display: block;
   width: 100%;
   margin-bottom: 42px;
+}
+
+.contact__write {
+  display: block;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 230px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }
