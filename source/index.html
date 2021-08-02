@@ -63,7 +63,6 @@
     </div>
   </header>
 
-
   <main class="page-main">
     <h1 class="visually-hidden">Магазин товаров для дома Мишка</h1>
 
@@ -202,9 +201,34 @@
       </div>
     </section>
 
+    <!-- modal--opened если окно открыто -->
+    <section class="modal">
+      <div class="modal__container container">
+
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <form class="modal__form form-size" action="https://echo.htmlacademy.ru" method="GET">
+          <p class="form-size__note">Выберите размер:</p>
+          <ul class="form-size__list">
+            <li class="form-size__item">
+              <input class="form-size__radio" type="radio" name="selected-size" id="size-s" value="size-s" checked>
+              <label class="form-size__label" for="size-s">S</label>
+            </li>
+            <li class="form-size__item">
+              <input class="form-size__radio" type="radio" name="selected-size" id="size-m" value="size-m">
+              <label class="form-size__label" for="size-m">M</label>
+            </li>
+            <li class="form-size__item">
+              <input class="form-size__radio" type="radio" name="selected-size" id="size-l" value="size-l">
+              <label class="form-size__label" for="size-l">L</label>
+            </li>
+          </ul>
+          <button class="form-size__add" type="submit">Добавить</button>
+        </form>
+
+      </div>
+    </section>
 
   </main>
-
 
   <footer class="page-footer">
     <div class="page-footer__color-box">
@@ -246,31 +270,6 @@
     </div>
 
   </footer>
-
-  <!-- modal--opened если окно открыто -->
-  <section class="modal">
-
-    <h2 class="modal__title">Добавить в корзину</h2>
-    <form class="modal__form form-size" action="https://echo.htmlacademy.ru" method="GET">
-      <p class="form-size__note">Выберите размер:</p>
-      <ul class="form-size__list">
-        <li class="form-size__item">
-          <input class="form-size__radio" type="radio" name="selected-size" id="size-s" value="size-s" checked>
-          <label class="form-size__label" for="size-s">S</label>
-        </li>
-        <li class="form-size__item">
-          <input class="form-size__radio" type="radio" name="selected-size" id="size-m" value="size-m">
-          <label class="form-size__label" for="size-m">M</label>
-        </li>
-        <li class="form-size__item">
-          <input class="form-size__radio" type="radio" name="selected-size" id="size-l" value="size-l">
-          <label class="form-size__label" for="size-l">L</label>
-        </li>
-      </ul>
-      <button class="form-size__add" type="submit">Добавить</button>
-    </form>
-
-  </section>
 
   <!-- overlay затемняет и блокирует страницу при открытии модального окна -->
   <!-- page-body__overlay--opened для открытого модального окна -->
