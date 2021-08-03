@@ -29,6 +29,8 @@
 
 .form__text,
 .form__tel {
+  box-sizing: border-box;
+  width: 100%;
   padding: 15px 3px 14px 0;
   font-size: 17px;
   line-height: 18px;
@@ -49,6 +51,8 @@
 }
 
 .form__message {
+  box-sizing: border-box;
+  width: 100%;
   padding: 17px;
   font-size: 17px;
   line-height: 18px;
@@ -90,4 +94,20 @@
   font-size: 17px;
   line-height: 16px;
   cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .form__unit--type-selection {
+    display: grid;
+    grid-template-columns: 175px auto;
+    grid-template-rows: min-content;
+
+    .form__subject {
+      grid-column: ~"1/2";
+    }
+
+    .form__list {
+      grid-column: ~"2/-1";
+    }
+  }
 }
