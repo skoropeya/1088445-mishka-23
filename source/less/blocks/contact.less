@@ -2,27 +2,34 @@
   margin-bottom: 38px;
 
   @media (min-width: @desktop-width) {
-    .limit-desktop;
+    .box-desktop;
     display: grid;
     grid-template-columns: 175px 350px auto;
+    grid-template-rows: auto auto;
   }
 }
 
 .contact__container {
   @media (min-width: @desktop-width) {
     &--info {
+      width: 350px;
+      padding: 0;
       grid-column: ~"2/3";
       grid-row: ~"1/3";
     }
 
     &--map {
+      height: 457px;
+      min-width: 527px;
       grid-column: ~"3/4";
       grid-row: ~"1/-1";
     }
 
     &--btn {
+      width: 350px;
+      padding: 0;
       grid-column: ~"2/3";
-      grid-row: ~"3/4";
+      grid-row: ~"2/3";
     }
   }
 }
@@ -62,7 +69,6 @@
   }
 }
 
-
 .contact__email-value {
   a {
     color: @color-text;
@@ -84,12 +90,6 @@
 .contact__address-value {
   address {
     font-style: normal;
-  }
-}
-
-.contact__box {
-  @media (min-width: @desktop-width) {
-    .limit-desktop;
   }
 }
 
