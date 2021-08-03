@@ -1,5 +1,14 @@
+.card {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 30px;
+}
+
 .card__border-box {
+  padding: 27px 28px;
   border: 1px solid @light-grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   &:hover,
   &:focus {
@@ -12,6 +21,7 @@
 }
 
 .card__title {
+  grid-column: ~"1/-1";
   margin: 0;
   font-weight: bold;
   font-size: 17px;
@@ -29,6 +39,11 @@
 }
 
 .card__description {
+  grid-column: ~"1/-1";
+  margin: 0;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid @light-grey;
   font-size: 13px;
   line-height: 30px;
   color: @color-text;
@@ -39,6 +54,8 @@
 }
 
 .card__price {
+  justify-self: start;
+  margin: 0;
   font-weight: bold;
   font-size: 15px;
   line-height: 24px;
@@ -49,6 +66,7 @@
 }
 
 .card__add-cart {
+  justify-self: end;
   display: block;
   width: 20px;
   height: 19px;
