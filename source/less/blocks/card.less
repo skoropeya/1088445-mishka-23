@@ -1,14 +1,24 @@
 .card {
+  min-height: 374px;
   display: flex;
   flex-direction: column-reverse;
-  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 334px;
+    flex-direction: row-reverse;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 659px;
+    flex-direction: column-reverse;
+  }
 }
 
 .card__border-box {
   padding: 27px 28px;
   border: 1px solid @light-grey;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
 
   &:hover,
   &:focus {
@@ -21,52 +31,42 @@
 }
 
 .card__title {
-  grid-column: ~"1/-1";
   margin: 0;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
+  width: 250px;
 
   a {
     color: inherit;
     text-decoration: none;
   }
-
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 24px;
-  }
 }
 
 .card__description {
-  grid-column: ~"1/-1";
   margin: 0;
-  margin-bottom: 22px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid @light-grey;
+  padding-bottom: 10px;
   font-size: 13px;
   line-height: 30px;
   color: @color-text;
+}
 
-  @media (min-width: @tablet-width) {
-    font-size: 15px;
-  }
+.card__wrapper {
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1px solid @light-grey;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card__price {
-  justify-self: start;
   margin: 0;
   font-weight: bold;
   font-size: 15px;
   line-height: 24px;
-
-  @media (min-width: @tablet-width) {
-    font-size: 17px;
-  }
 }
 
 .card__add-cart {
-  justify-self: end;
   display: block;
   width: 20px;
   height: 19px;
@@ -78,6 +78,34 @@
   cursor: pointer;
 }
 
+@media (min-width: @tablet-width) {
+  .card__title {
+    margin-bottom: 6px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .card__description {
+    font-size: 15px;
+  }
+
+  .card__price {
+    font-size: 17px;
+  }
+}
+
 .card__img {
   display: block;
+  width: 260px;
+  height: 195px;
+
+  @media (min-width: @tablet-width) {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 315px;
+    height: 462px;
+  }
 }
