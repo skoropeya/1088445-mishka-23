@@ -16,7 +16,8 @@
         <img class="page-header__logo" src="./img/mishka-logo-1.svg" width="86" height="35" alt="Логотип магазина Мишка">
       </a>
 
-      <nav class="page-header__nav main-nav">
+      <!-- main-nav--no-js если не работает JS -->
+      <nav class="page-header__nav main-nav main-nav--no-js">
         <!-- main-nav__toggle только для мобильной версии -->
         <!-- main-nav__toggle--opened для открытого меню-->
         <!-- main-nav__toggle--closed для закрытого меню-->
@@ -77,13 +78,13 @@
 
       <div class="attract__box">
         <a class="attract__category attract__category--interior" href="#">
-          <div class="attract__container attract__container--link container">
+          <div class="attract__wrapper">
             <span class="attract__subtitle">Предметы интерьера</span>
           </div>
         </a>
 
         <a class="attract__category attract__category--toy" href="#">
-          <div class="attract__container attract__container--link container">
+          <div class="attract__wrapper">
             <span class="attract__subtitle">Детские игрушки</span>
           </div>
         </a>
@@ -180,7 +181,7 @@
 
     <section class="contact">
 
-      <div class="contact__container contact__container--info container">
+      <div class="contact__container contact__container--info">
         <h2 class="contact__title heading-secondary">Контакты</h2>
 
         <dl class="contact__info">
@@ -204,7 +205,7 @@
         <!-- <img class="contact__map" src="./img/map-1@1x.png" alt="Адрес магазина на карте г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101"> -->
       </div>
 
-      <div class="contact__container contact__container--btn container">
+      <div class="contact__container contact__container--btn">
         <a class="contact__write button" href="#">Напишите нам</a>
       </div>
 

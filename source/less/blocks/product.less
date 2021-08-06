@@ -47,6 +47,8 @@
   @media (min-width: @tablet-width) {
     line-height: 17px;
     grid-area: mark;
+    justify-self: center;
+    align-self: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -62,12 +64,17 @@
   height: 315px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 0;
     grid-area: image;
+    width: 334px;
+    height: 404px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: ~"4/-1";
     grid-row: ~"1/-1";
+    width: 525px;
+    height: 636px;
   }
 }
 
@@ -140,7 +147,9 @@
 .product__make-order {
   @media (min-width: @tablet-width) {
     grid-area: make-order;
-    justify-self: start;
+    align-self: flex-end;
+    justify-self: flex-start;
+    width: 292px;
   }
 
   @media (min-width: @desktop-width) {

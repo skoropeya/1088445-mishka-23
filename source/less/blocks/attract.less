@@ -1,6 +1,7 @@
 .attract {
   padding-top: 80px;
   margin-bottom: 30px;
+  background-color: @and-again-grey;
   background-image: url("../img/attract-bg-1.jpg");
   background-repeat: no-repeat;
   background-position: top center;
@@ -8,19 +9,15 @@
 
 .attract__box {
   @media (min-width: @tablet-width) {
-    .container;
+    .limiter;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-
-  @media (min-width: @desktop-width) {
-    .container;
-  }
 }
 
-.attract__container--link {
-  @media (min-width: @tablet-width) {
-    width: 234px;
+.attract__wrapper {
+  @media (max-width: @only-mobile-width) {
+    .limiter;
   }
 }
 
@@ -79,7 +76,10 @@
 
 .attract__subtitle {
   display: block;
-  padding-top: 24px;
-  padding-bottom: 31px;
-  padding-right: 130px;
+  padding: 24px 130px 31px 0;
+
+  @media (min-width: @tablet-width) {
+    width: 180px;
+    padding: 25px 130px 34px 36px;
+  }
 }
