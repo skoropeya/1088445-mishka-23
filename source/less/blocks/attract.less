@@ -1,10 +1,15 @@
 .attract {
-  padding-top: 80px;
+  padding-top: 73px;
   margin-bottom: 30px;
   background-color: @and-again-grey;
   background-image: url("../img/attract-bg-1.jpg");
   background-repeat: no-repeat;
   background-position: top center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 154px;
+    margin-bottom: 52px;
+  }
 }
 
 .attract__box {
@@ -23,10 +28,11 @@
 
 .attract__title {
   margin: 0 auto;
-  margin-bottom: 116px;
+  margin-bottom: 120px;
 
   @media (min-width: @tablet-width) {
     width: 600px;
+    margin-bottom: 370px;
   }
 }
 
@@ -79,7 +85,6 @@
   padding: 24px 130px 31px 0;
 
   @media (min-width: @tablet-width) {
-    width: 180px;
     padding: 25px 130px 34px 36px;
   }
 }
