@@ -25,13 +25,16 @@
 }
 
 .page-header__container {
-  display: flex;
-  flex-direction: column;
+  @media (min-width: @tablet-width) {
+    display: grid;
+  }
 }
 
 .page-header__link-logo {
+  display: block;
   box-sizing: border-box;
   margin: 22px auto;
+  width: 86px;
 
   &:hover,
   &:focus {
@@ -43,11 +46,19 @@
   }
 
   @media (min-width: @tablet-width) {
+    grid-column: ~"1/2";
+    grid-row: ~"1/2";
+    justify-self: left;
+    align-self: flex-start;
+    z-index: 3;
+    width: 113px;
     margin-left: 0;
     margin-bottom: 20px;
   }
 
   @media (min-width: @desktop-width) {
+    justify-self: center;
+    width: 149px;
     margin: 0 auto;
     margin-top: 9px;
     margin-bottom: 8px;
@@ -67,5 +78,12 @@
   @media (min-width: @desktop-width) {
     width: 149px;
     height: 72px;
+  }
+}
+
+.page-header__nav {
+  @media (min-width: @tablet-width) {
+    grid-column: ~"1/2";
+    grid-row: ~"1/2";
   }
 }
