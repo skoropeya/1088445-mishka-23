@@ -21,14 +21,21 @@
 
 .form__label {
   font-weight: bold;
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+  }
 }
 
 .form__text,
 .form__tel {
+  box-sizing: border-box;
+  width: 100%;
   padding: 15px 3px 14px 0;
   font-size: 17px;
   line-height: 18px;
   color: @color-text;
+  background-color: transparent;
   border: none;
   box-shadow: inset 0 -2px 0 @color-black;
 
@@ -38,13 +45,20 @@
     outline: none;
     box-shadow: inset 0 -2px 0 @underline;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+  }
 }
 
 .form__message {
+  box-sizing: border-box;
+  width: 100%;
   padding: 17px;
   font-size: 17px;
   line-height: 18px;
   color: @color-text;
+  background-color: transparent;
   border: 2px solid @color-text;
 
   &:hover,
@@ -53,6 +67,10 @@
     color: @color-black;
     outline: none;
     border: 2px solid @underline;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
   }
 }
 
@@ -64,11 +82,203 @@
 }
 
 .form__note {
+  margin: 0;
   font-size: 14px;
   line-height: 16px;
   color: @color-text;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .form__send-order {
+  width: 100%;
+  font-size: 17px;
+  line-height: 16px;
   cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .form__unit--type-selection {
+    display: grid;
+    grid-template-columns: 175px auto;
+
+    .form__subject {
+      grid-column: ~"1/2";
+    }
+
+    .form__list {
+      grid-column: ~"2/-1";
+      margin-bottom: 50px;
+    }
+  }
+
+  .form__unit--color-selection {
+    display: grid;
+    grid-template-columns: 175px auto;
+
+    .form__subject {
+      grid-column: ~"1/2";
+    }
+
+    .form__list {
+      grid-column: ~"2/-1";
+      margin-bottom: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .form__unit--personal-name {
+    display: grid;
+    grid-template-columns: 175px auto;
+
+    .form__subject {
+      grid-column: ~"1/2";
+    }
+
+    .form__list {
+      grid-column: ~"2/-1";
+      margin-bottom: 50px;
+    }
+
+    .form__item {
+      display: flex;
+      align-items: center;
+    }
+
+    .form__label {
+      flex-shrink: 0;
+      padding-right: 25px;
+    }
+  }
+
+  .form__unit--phone {
+    display: grid;
+    grid-template-columns: 175px auto;
+
+    .form__subject {
+      grid-column: ~"1/2";
+    }
+
+    .form__tel {
+      grid-column: ~"2/-1";
+      margin-bottom: 24px;
+    }
+  }
+
+  .form__unit--email {
+    display: grid;
+    grid-template-columns: 175px auto;
+
+    .form__subject {
+      grid-column: ~"1/2";
+    }
+
+    .form__text {
+      grid-column: ~"2/-1";
+      margin-bottom: 50px;
+    }
+  }
+
+  .form__unit--message {
+    display: grid;
+    grid-template-columns: 175px auto;
+
+    .form__subject {
+      grid-column: ~"1/2";
+    }
+
+    .form__message {
+      grid-column: ~"2/-1";
+      margin-bottom: 50px;
+    }
+  }
+
+  .form__unit--send-order {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .form__note {
+      margin-top: 10px;
+    }
+
+    .form__send-order {
+      width: 230px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__unit--color-selection {
+    .form__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .form__unit--personal-name {
+    display: grid;
+    grid-template-columns: 175px auto 175px;
+
+    .form__subject {
+      grid-column: ~"1/2";
+    }
+
+    .form__list {
+      grid-column: ~"2/3";
+    }
+  }
+
+  .form__unit--phone {
+    display: grid;
+    grid-template-columns: 175px auto 175px;
+
+    .form__subject {
+      grid-column: ~"1/2";
+    }
+
+    .form__tel {
+      grid-column: ~"2/3";
+    }
+  }
+
+  .form__unit--email {
+    display: grid;
+    grid-template-columns: 175px auto 175px;
+
+    .form__subject {
+      grid-column: ~"1/2";
+    }
+
+    .form__text {
+      grid-column: ~"2/3";
+    }
+  }
+
+  .form__unit--message {
+    display: grid;
+    grid-template-columns: 175px auto 175px;
+
+    .form__subject {
+      grid-column: ~"1/2";
+    }
+
+    .form__message {
+      grid-column: ~"2/3";
+    }
+  }
+
+  .form__unit--send-order {
+    .form__note {
+      margin-right: 175px;
+    }
+
+    .form__send-order {
+      margin-left: 175px;
+    }
+  }
 }

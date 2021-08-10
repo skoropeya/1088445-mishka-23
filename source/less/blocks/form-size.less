@@ -1,12 +1,26 @@
+.form-size {
+  display: flex;
+  flex-direction: column;
+}
+
 .form-size__note {
+  margin: 0;
+  margin-bottom: 22px;
   font-size: 15px;
   line-height: 30px;
   text-align: center;
 }
 
 .form-size__list {
+  margin: 0;
+  margin-bottom: 31px;
   padding: 0;
   list-style: none;
+  display: flex;
+}
+
+.form-size__item:not(:last-child) {
+  margin-right: 7px;
 }
 
 .form-size__label {
@@ -46,4 +60,10 @@
   background-color: @color-accent1;
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: @color-accent2;
+  }
 }

@@ -1,7 +1,37 @@
+.page-main {
+  @media (min-width: @tablet-width) {
+    // margin-top: -44px;
+  }
+}
+
 .page-main__color-box {
   background-color: @color-back;
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 99px;
+  }
 }
 
 .page-main__container {
-  background-color: @color-back;
+  padding-top: 74px;
+  padding-bottom: 73px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 102px;
+    padding-bottom: 96px;
+  }
+}
+
+.page-main__title {
+  margin: 0;
 }

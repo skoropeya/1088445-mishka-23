@@ -1,8 +1,27 @@
+.video-demo {
+  position: relative;
+}
+
 .video-demo__preview {
   display: block;
+  width: 260px;
+  height: 150px;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    height: 455px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 683px;
+  }
 }
 
 .video-demo__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
   display: block;
   padding: 0;
   width: 101px;
@@ -26,10 +45,4 @@
     height: 62px;
     opacity: 0.3;
   }
-}
-
-.video-demo__description {
-  font-size: 13px;
-  line-height: 24px;
-  color: @color-text;
 }

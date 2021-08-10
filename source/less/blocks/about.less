@@ -2,8 +2,19 @@
   margin-bottom: 58px;
 }
 
+.about__container {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
 .about__title {
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    grid-column: ~"2/-2";
+  }
 }
 
 .about__list {
@@ -13,8 +24,51 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "material manually"
+      "scandinavian home"
+      "like gift";
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: ~"2/-2";
+  }
 }
 
 .about__item {
   padding-top: 83px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 110px;
+  }
+
+  &--material {
+    grid-area: material;
+  }
+
+  &--scandinavian {
+    grid-area: scandinavian;
+  }
+
+  &--like {
+    grid-area: like;
+  }
+
+  &--manually {
+    grid-area: manually;
+  }
+
+  &--home {
+    grid-area: home;
+  }
+
+  &--gift {
+    grid-area: gift;
+  }
 }

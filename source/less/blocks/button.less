@@ -1,7 +1,7 @@
 .button {
   display: inline-block;
   box-sizing: border-box;
-  padding: 12px;
+  padding: 14px 12px 15px 12px;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -25,5 +25,9 @@
     color: rgba(@color-white-rgb, 0.3);
     background: linear-gradient(0deg, @color-text, @color-text);
     border: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
   }
 }
