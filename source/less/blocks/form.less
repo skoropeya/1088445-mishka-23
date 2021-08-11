@@ -1,3 +1,23 @@
+.form__container {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.form__color-box {
+  background-color: @color-back;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+
+    .form__container {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .form__unit {
   margin: 0;
   padding: 0;
@@ -103,7 +123,8 @@
 @media (min-width: @tablet-width) {
   .form__unit--type-selection {
     display: grid;
-    grid-template-columns: 175px auto;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 50px;
 
     .form__subject {
       grid-column: ~"1/2";
@@ -111,13 +132,12 @@
 
     .form__list {
       grid-column: ~"2/-1";
-      margin-bottom: 50px;
     }
   }
 
   .form__unit--color-selection {
     display: grid;
-    grid-template-columns: 175px auto;
+    grid-template-columns: repeat(4, 1fr);
 
     .form__subject {
       grid-column: ~"1/2";
@@ -125,7 +145,6 @@
 
     .form__list {
       grid-column: ~"2/-1";
-      margin-bottom: 50px;
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
@@ -133,7 +152,8 @@
 
   .form__unit--personal-name {
     display: grid;
-    grid-template-columns: 175px auto;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 50px;
 
     .form__subject {
       grid-column: ~"1/2";
@@ -141,7 +161,6 @@
 
     .form__list {
       grid-column: ~"2/-1";
-      margin-bottom: 50px;
     }
 
     .form__item {
@@ -157,7 +176,7 @@
 
   .form__unit--phone {
     display: grid;
-    grid-template-columns: 175px auto;
+    grid-template-columns: repeat(4, 1fr);
 
     .form__subject {
       grid-column: ~"1/2";
@@ -165,13 +184,12 @@
 
     .form__tel {
       grid-column: ~"2/-1";
-      margin-bottom: 24px;
     }
   }
 
   .form__unit--email {
     display: grid;
-    grid-template-columns: 175px auto;
+    grid-template-columns: repeat(4, 1fr);
 
     .form__subject {
       grid-column: ~"1/2";
@@ -179,13 +197,13 @@
 
     .form__text {
       grid-column: ~"2/-1";
-      margin-bottom: 50px;
     }
   }
 
   .form__unit--message {
     display: grid;
-    grid-template-columns: 175px auto;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 50px;
 
     .form__subject {
       grid-column: ~"1/2";
@@ -193,92 +211,86 @@
 
     .form__message {
       grid-column: ~"2/-1";
-      margin-bottom: 50px;
     }
   }
 
   .form__unit--send-order {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
     .form__note {
-      margin-top: 10px;
+      grid-column: ~"2/3";
+      grid-row: ~"1/2";
+      justify-self: end;
+      align-self: center;
     }
 
     .form__send-order {
+      grid-column: ~"1/2";
+      grid-row: ~"1/2";
       width: 230px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .form__unit--color-selection {
+  .form__unit--type-selection {
+    grid-template-columns: repeat(6, 1fr);
+
     .form__list {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-column: ~"2/-2";
+    }
+  }
+
+  .form__unit--color-selection {
+    grid-template-columns: repeat(6, 1fr);
+
+    .form__list {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
   .form__unit--personal-name {
-    display: grid;
-    grid-template-columns: 175px auto 175px;
-
-    .form__subject {
-      grid-column: ~"1/2";
-    }
+    grid-template-columns: repeat(6, 1fr);
 
     .form__list {
-      grid-column: ~"2/3";
+      grid-column: ~"2/-2";
     }
   }
 
   .form__unit--phone {
-    display: grid;
-    grid-template-columns: 175px auto 175px;
-
-    .form__subject {
-      grid-column: ~"1/2";
-    }
+    grid-template-columns: repeat(6, 1fr);
 
     .form__tel {
-      grid-column: ~"2/3";
+      grid-column: ~"2/-2";
     }
   }
 
   .form__unit--email {
-    display: grid;
-    grid-template-columns: 175px auto 175px;
-
-    .form__subject {
-      grid-column: ~"1/2";
-    }
+    grid-template-columns: repeat(6, 1fr);
 
     .form__text {
-      grid-column: ~"2/3";
+      grid-column: ~"2/-2";
     }
   }
 
   .form__unit--message {
-    display: grid;
-    grid-template-columns: 175px auto 175px;
-
-    .form__subject {
-      grid-column: ~"1/2";
-    }
+    grid-template-columns: repeat(6, 1fr);
 
     .form__message {
-      grid-column: ~"2/3";
+      grid-column: ~"2/-2";
     }
   }
 
   .form__unit--send-order {
+    grid-template-columns: repeat(6, 1fr);
+
     .form__note {
-      margin-right: 175px;
+      grid-column: ~"4/-2";
     }
 
     .form__send-order {
-      margin-left: 175px;
+      grid-column: ~"2/4";
     }
   }
 }
