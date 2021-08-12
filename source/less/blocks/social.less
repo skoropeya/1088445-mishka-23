@@ -24,6 +24,27 @@
   display: block;
   width: 23px;
   height: 28px;
-  // потому уберу
-  background-color: #f08080;
+  text-align: center;
+
+  .social__icon {
+    vertical-align: middle;
+  }
+
+  &:hover,
+  &:focus {
+    path {
+      fill: @mail-hover;
+    }
+  }
+
+  &:active {
+    .social__icon {
+      opacity: 0.3;
+    }
+
+    path {
+      fill: @mail-hover;
+    }
+  }
 }
+

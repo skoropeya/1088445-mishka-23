@@ -15,6 +15,21 @@
   display: block;
   width: 27px;
   height: 34px;
-  // потому уберу
-  background-color: #f08080;
+
+  &:hover,
+  &:focus {
+    path {
+      fill: @mail-hover;
+    }
+  }
+
+  &:active {
+    .copyright__icon {
+      opacity: 0.3;
+    }
+
+    path {
+      fill: @mail-hover;
+    }
+  }
 }

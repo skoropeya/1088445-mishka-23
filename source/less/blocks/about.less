@@ -1,5 +1,9 @@
 .about {
   margin-bottom: 58px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 73px;
+  }
 }
 
 .about__container {
@@ -43,32 +47,142 @@
 
 .about__item {
   padding-top: 83px;
+  position: relative;
 
-  @media (min-width: @tablet-width) {
-    padding-top: 110px;
+  &::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &--material {
     grid-area: material;
+
+    &::before {
+      width: 33px;
+      height: 38px;
+      left: 9px;
+      top: 28px;
+      background-image: url("../img/about/icon-flower.svg");
+
+      @media (min-width: @tablet-width) {
+        top: 43px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: 40px;
+      }
+    }
   }
 
   &--scandinavian {
     grid-area: scandinavian;
+
+    &::before {
+      width: 47px;
+      height: 27px;
+      left: 0;
+      top: 28px;
+      background-image: url("../img/about/icon-bond.svg");
+
+      @media (min-width: @tablet-width) {
+        top: 46px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: 41px;
+      }
+    }
   }
 
   &--like {
     grid-area: like;
+
+    &::before {
+      width: 47px;
+      height: 27px;
+      left: 1px;
+      top: 33px;
+      background-image: url("../img/about/icon-heart.svg");
+
+      @media (min-width: @tablet-width) {
+        top: 52px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: 47px;
+      }
+    }
   }
 
   &--manually {
     grid-area: manually;
+
+    &::before {
+      width: 35px;
+      height: 34px;
+      left: 4px;
+      top: 31px;
+      background-image: url("../img/about/icon-roll.svg");
+
+      @media (min-width: @tablet-width) {
+        top: 46px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: 43px;
+      }
+    }
   }
 
   &--home {
     grid-area: home;
+
+    &::before {
+      width: 55px;
+      height: 23px;
+      left: -5px;
+      top: 31px;
+      background-image: url("../img/about/icon-rocket.svg");
+
+      @media (min-width: @tablet-width) {
+        top: 48px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: 45px;
+      }
+    }
   }
 
   &--gift {
     grid-area: gift;
+
+    &::before {
+      width: 33px;
+      height: 32px;
+      left: 3px;
+      top: 29px;
+      background-image: url("../img/about/icon-gift.svg");
+
+      @media (min-width: @tablet-width) {
+        top: 48px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: 45px;
+      }
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 95px;
+    padding-bottom: 15px;
   }
 }
