@@ -16,7 +16,7 @@
         <img class="page-header__logo" src="./img/mishka-logo-1.svg" width="86" height="35" alt="Логотип магазина Мишка">
       </a>
 
-      <nav class="page-header__nav main-nav">
+      <nav class="page-header__nav main-nav main-nav--no-js">
         <!-- main-nav__toggle только для мобильной версии -->
         <!-- main-nav__toggle--opened для открытого меню-->
         <!-- main-nav__toggle--closed для закрытого меню-->
@@ -103,32 +103,34 @@
 
     <section class="product-week">
       <div class="product-week__container container">
+        <div class="product-week__wrapper">
 
-        <h2 class="visually-hidden">Товар недели</h2>
+          <h2 class="visually-hidden">Товар недели</h2>
 
-        <div class="product-week__card product">
-          <h3 class="product__name heading-secondary">Вязаные корзинки</h3>
-          <p class="product__mark">Товар недели</p>
-          <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в&nbsp;шести расцветках и&nbsp;трёх размерах.</p>
-          <dl class="product__features">
-            <div class="product__feature">
-              <dt class="product__color">Цвет:</dt>
-              <dd class="product__color-value">&laquo;Тиффани&raquo;/серый</dd>
-            </div>
-            <div class="product__feature">
-              <dt class="product__diameter">Диаметр:</dt>
-              <dd class="product__diameter-value">25 см</dd>
-            </div>
-            <div class="product__feature">
-              <dt class="product__height">Высота:</dt>
-              <dd class="product__height-value">15 см</dd>
-            </div>
-          </dl>
-          <img class="product__image" src="./img/triple-set.png" width="260" height="315" alt="Три вязаные корзинки разных размеров">
-          <p class="product__price">Цена: 990 руб.</p>
-          <a class="product__make-order button" href="#">Заказать</a>
+          <div class="product-week__card product">
+            <h3 class="product__name heading-secondary">Вязаные корзинки</h3>
+            <p class="product__mark">Товар недели</p>
+            <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в&nbsp;шести расцветках и&nbsp;трёх размерах.</p>
+            <dl class="product__features">
+              <div class="product__feature">
+                <dt class="product__color">Цвет:</dt>
+                <dd class="product__color-value">&laquo;Тиффани&raquo;/серый</dd>
+              </div>
+              <div class="product__feature">
+                <dt class="product__diameter">Диаметр:</dt>
+                <dd class="product__diameter-value">25 см</dd>
+              </div>
+              <div class="product__feature">
+                <dt class="product__height">Высота:</dt>
+                <dd class="product__height-value">15 см</dd>
+              </div>
+            </dl>
+            <img class="product__image" src="./img/triple-set.png" width="260" height="315" alt="Три вязаные корзинки разных размеров">
+            <p class="product__price">Цена: 990 руб.</p>
+            <a class="product__make-order button" href="#">Заказать</a>
+          </div>
+
         </div>
-
       </div>
     </section>
 
@@ -151,40 +153,42 @@
 
     <section class="reviews">
       <div class="reviews__container container">
+        <div class="reviews__wrapper">
 
-        <h2 class="reviews__title heading-secondary">Отзывы</h2>
-        <a class="reviews__write button" href="#">Написать</a>
-        <ul class="reviews__list slider">
-          <!-- slider__item--opened  открытый слайд -->
-          <li class="slider__item slider__item--opened">
-            <blockquote class="slider__quote quote">
-              <p class="quote__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-              <cite class="quote__author">Анастасия Красильникова</cite>
-              <p class="quote__link">@misssssiskras</p>
-            </blockquote>
-          </li>
-          <!-- скрытый слайд -->
-          <li class="slider__item">
-            <blockquote class="slider__quote quote">
-              <p class="quote__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-              <cite class="quote__author">Екатерина Красильникова</cite>
-              <p class="quote__link">@misssssiskras2</p>
-            </blockquote>
-          </li>
-          <!-- скрытый слайд -->
-          <li class="slider__item">
-            <blockquote class="slider__quote quote">
-              <p class="quote__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-              <cite class="quote__author">Елена Красильникова</cite>
-              <p class="quote__link">@misssssiskras3</p>
-            </blockquote>
-          </li>
-        </ul>
-        <div class="reviews__controls">
-          <button class="reviews__button reviews__button--prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
-          <button class="reviews__button reviews__button--next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+          <h2 class="reviews__title heading-secondary">Отзывы</h2>
+          <a class="reviews__write button" href="#">Написать</a>
+          <ul class="reviews__list slider">
+            <!-- slider__item--opened  открытый слайд -->
+            <li class="slider__item slider__item--opened">
+              <blockquote class="slider__quote quote">
+                <p class="quote__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                <cite class="quote__author">Анастасия Красильникова</cite>
+                <p class="quote__link">@misssssiskras</p>
+              </blockquote>
+            </li>
+            <!-- скрытый слайд -->
+            <li class="slider__item">
+              <blockquote class="slider__quote quote">
+                <p class="quote__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                <cite class="quote__author">Екатерина Красильникова</cite>
+                <p class="quote__link">@misssssiskras2</p>
+              </blockquote>
+            </li>
+            <!-- скрытый слайд -->
+            <li class="slider__item">
+              <blockquote class="slider__quote quote">
+                <p class="quote__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                <cite class="quote__author">Елена Красильникова</cite>
+                <p class="quote__link">@misssssiskras3</p>
+              </blockquote>
+            </li>
+          </ul>
+          <div class="reviews__controls">
+            <button class="reviews__button reviews__button--prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
+            <button class="reviews__button reviews__button--next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+          </div>
+
         </div>
-
       </div>
     </section>
 

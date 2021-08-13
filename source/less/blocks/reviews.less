@@ -1,25 +1,57 @@
 .reviews {
+  position: relative;
   margin-bottom: 89px;
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -51px;
+    width: 100%;
+    height: 6px;
+    background-image: url("../img/zigzag-pattern.svg");
+    background-repeat: repeat-x;
+    background-position-x: left;
+  }
+
   @media (min-width: @tablet-width) {
-    margin-bottom: 125px;
+    margin-bottom: 155px;
+
+    &::after {
+      bottom: -86px;
+      height: 17px;
+      background-size: 75px 17px;
+    }
   }
 
   @media (min-width: @desktop-width) {
+    position: static;
     margin-bottom: 161px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
 .reviews__container {
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/back-review.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 50px top;
+  }
+}
+
+.reviews__wrapper {
   display: grid;
   grid-template-columns: 1fr;
 
   @media (min-width: @tablet-width) {
     padding-top: 82px;
     padding-bottom: 47px;
-    background-image: url("../img/back-review.jpg");
-    background-repeat: no-repeat;
-    background-position: left top;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, min-content);
   }
@@ -27,8 +59,20 @@
   @media (min-width: @desktop-width) {
     padding-top: 78px;
     padding-bottom: 96px;
-    background-position: 50px top;
     grid-template-columns: repeat(6, 1fr);
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -97px;
+      width: 100%;
+      height: 23px;
+      background-image: url("../img/zigzag-pattern.svg");
+      background-repeat: repeat-x;
+      background-position-x: left;
+      background-size: 106px 23px;
+    }
   }
 }
 
