@@ -14,10 +14,19 @@
   }
 }
 
+.main-nav__toggle-box {
+  .limiter;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .main-nav__toggle {
   position: absolute;
   top: -50px;
-  right: 0;
+  right: 30px;
   padding: 0;
   width: 21px;
   height: 20px;
@@ -33,10 +42,6 @@
 
   &--closed {
     background-image: url("../img/icon/icon-menu.svg");
-  }
-
-  @media (min-width: @tablet-width) {
-    display: none;
   }
 }
 
@@ -108,17 +113,21 @@
 @media (max-width: @only-mobile-width) {
   .main-nav__wrapper {
     position: absolute;
-    z-index: 3;
+    z-index: 5;
+    width: 100%;
+    background-color: @color-white;
+    overflow: hidden;
 
     .main-nav__list {
-      margin-left: -30px;
-      min-width: 320px;
+      max-width: 320px;
+      margin: 0 auto;
+      padding: 0;
     }
   }
 
   .main-nav__item {
+    position: relative;
     background-color: @color-white;
-    box-shadow: inset 0 1px 0 @light-grey;
 
     a {
       padding: 28px 10px 27px 76px;
@@ -131,6 +140,17 @@
 
     .main-nav__icon {
       margin-right: 25px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-50%);
+      width: 200vw;
+      height: 1px;
+      box-shadow: inset 0 1px 0 @light-grey;
     }
   }
 }
@@ -287,7 +307,7 @@
 // открытое меню без JS
 @media (max-width: @only-mobile-width) {
   .main-nav--no-js {
-    .main-nav__toggle {
+    .main-nav__toggle-box {
       display: none;
     }
 
