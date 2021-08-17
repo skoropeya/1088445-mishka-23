@@ -1,11 +1,9 @@
 .main-nav {
-  position: relative;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
 
   @media (min-width: @tablet-width) {
-    position: static;
     font-size: 15px;
   }
 
@@ -15,8 +13,10 @@
 }
 
 .main-nav__toggle-box {
-  .limiter;
-  position: relative;
+  @media (max-width: @only-mobile-width) {
+    .limiter;
+    position: relative;
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -113,44 +113,37 @@
 @media (max-width: @only-mobile-width) {
   .main-nav__wrapper {
     position: absolute;
-    z-index: 5;
+    z-index: 3;
     width: 100%;
-    background-color: @color-white;
-    overflow: hidden;
 
     .main-nav__list {
-      max-width: 320px;
-      margin: 0 auto;
-      padding: 0;
+      min-width: 320px;
     }
   }
 
   .main-nav__item {
-    position: relative;
     background-color: @color-white;
+    box-shadow: inset 0 1px 0 @light-grey;
 
     a {
-      padding: 28px 10px 27px 76px;
+      padding-top: 28px;
+      padding-bottom: 27px;
     }
 
-    &--search a,
-    &--cart a {
-      padding-left: 30px;
+    .main-nav__link-box {
+      .limiter;
     }
 
-    .main-nav__icon {
-      margin-right: 25px;
+    .main-nav__text {
+      padding-left: 46px;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      transform: translateX(-50%);
-      width: 200vw;
-      height: 1px;
-      box-shadow: inset 0 1px 0 @light-grey;
+    &--search .main-nav__text {
+      padding-left: 24px;
+    }
+
+    &--cart .main-nav__text {
+      padding-left: 21px;
     }
   }
 }
@@ -199,7 +192,7 @@
     border-left: 1px solid rgba(@color-black-rgb, 0.1);
 
     .main-nav__icon--search {
-      margin-right: 31px;
+      margin-right: 35px;
       margin-left: 33px;
       margin-top: 35px;
       margin-bottom: 29px;
@@ -215,7 +208,7 @@
     font-size: 17px;
     border-left: 1px solid rgba(@color-black-rgb, 0.1);
 
-    a {
+    .main-nav__link-box {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -223,7 +216,7 @@
 
     .main-nav__icon--cart {
       margin-right: 20px;
-      margin-left: 31px;
+      margin-left: 28px;
       margin-top: 35px;
       margin-bottom: 29px;
     }
@@ -262,8 +255,8 @@
       }
 
       a {
-        margin-top: 35px;
-        margin-bottom: 29px;
+        margin-top: 33px;
+        margin-bottom: 31px;
       }
 
       .main-nav__item:not(:last-child) {
