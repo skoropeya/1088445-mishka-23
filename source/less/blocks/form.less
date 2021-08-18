@@ -177,7 +177,7 @@
   }
 
   &:checked + .form__label::before {
-    background-image: url("../img/icon/tick.svg");
+    background-image: url("../img/icon/checkbox-tick.svg");
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -223,6 +223,16 @@
       top: 17px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    right: 8px;
+    top: 11px;
+
+    &--mail {
+      right: 4px;
+      top: 16px;
+    }
+  }
 }
 
 .form__text,
@@ -257,7 +267,7 @@
 
 .form__tel,
 .form__text--email {
-  padding-right: 36px;
+  padding-right: 40px;
 }
 
 .form__message {
@@ -560,63 +570,76 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form__unit--type-selection {
-    grid-template-columns: repeat(6, 1fr);
-
-    .form__list {
-      grid-column: ~"2/-2";
+  .form__container {
+    &--message {
+      margin-bottom: 50px;
     }
   }
 
-  .form__unit--color-selection {
-    grid-template-columns: repeat(6, 1fr);
-
-    .form__list {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  .form__unit--personal-name {
-    grid-template-columns: repeat(6, 1fr);
-
-    .form__list {
-      grid-column: ~"2/-2";
-    }
-  }
-
-  .form__unit--phone {
-    grid-template-columns: repeat(6, 1fr);
-
-    .form__wrapper {
-      grid-column: ~"2/-2";
-    }
-  }
-
-  .form__unit--email {
-    grid-template-columns: repeat(6, 1fr);
-
-    .form__wrapper {
-      grid-column: ~"2/-2";
-    }
-  }
-
-  .form__unit--message {
-    grid-template-columns: repeat(6, 1fr);
-
-    .form__message {
-      grid-column: ~"2/-2";
-    }
-  }
-
-  .form__unit--send-order {
-    grid-template-columns: repeat(6, 1fr);
-
-    .form__note {
-      grid-column: ~"4/-2";
+  .form__unit {
+    .form__subject {
+      padding-left: 60px;
     }
 
-    .form__send-order {
-      grid-column: ~"2/4";
+    &--type-selection {
+      grid-template-columns: repeat(6, 1fr);
+
+      .form__list {
+        grid-column: ~"2/-2";
+      }
+    }
+
+    &--color-selection {
+      grid-template-columns: repeat(6, 1fr);
+
+      .form__list {
+        grid-template-columns: 240px 240px 1fr;
+        column-gap: 22px;
+      }
+    }
+
+    &--personal-name {
+      grid-template-columns: repeat(6, 1fr);
+
+      .form__list {
+        grid-column: ~"2/-2";
+      }
+    }
+
+    &--phone {
+      grid-template-columns: repeat(6, 1fr);
+
+      .form__wrapper {
+        grid-column: ~"2/-2";
+      }
+    }
+
+    &--email {
+      grid-template-columns: repeat(6, 1fr);
+
+      .form__wrapper {
+        grid-column: ~"2/-2";
+      }
+    }
+
+    &--message {
+      grid-template-columns: repeat(6, 1fr);
+
+      .form__message {
+        grid-column: ~"2/-2";
+      }
+    }
+
+    &--send-order {
+      grid-template-columns: repeat(6, 1fr);
+
+      .form__note {
+        grid-column: ~"4/-2";
+      }
+
+      .form__send-order {
+        grid-column: ~"2/4";
+      }
     }
   }
 }
