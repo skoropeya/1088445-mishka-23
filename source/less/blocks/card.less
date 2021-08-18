@@ -2,6 +2,7 @@
   min-height: 374px;
   display: flex;
   flex-direction: column-reverse;
+  justify-content: flex-end;
 
   &:hover,
   &:focus {
@@ -24,39 +25,70 @@
 }
 
 .card__border-box {
+  flex-grow: 1;
   padding: 27px 28px;
   border: 1px solid @light-grey;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding: 27px 33px 26px 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 27px 32px 26px 26px;
+  }
 }
 
 .card__title {
   margin: 0;
+  margin-bottom: 5px;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
-  width: 250px;
+  width: 200px;
 
   a {
     color: inherit;
     text-decoration: none;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 7px;
+    font-size: 20px;
+    line-height: 24px;
+    width: 265px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 250px;
+  }
 }
 
 .card__description {
   margin: 0;
-  padding-bottom: 10px;
+  margin-top: auto;
+  margin-bottom: 17px;
   font-size: 13px;
   line-height: 30px;
   color: @color-text;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: auto;
+  }
 }
 
 .card__wrapper {
-  margin-top: auto;
   padding-top: 22px;
   border-top: 1px solid @light-grey;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 23px;
+  }
 }
 
 .card__price {
@@ -64,6 +96,10 @@
   font-weight: bold;
   font-size: 15px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .card__add-cart {
@@ -76,33 +112,6 @@
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
-}
-
-@media (min-width: @tablet-width) {
-  .card__border-box {
-    padding: 27px 33px 26px 34px;
-    flex-grow: 1;
-  }
-
-  .card__title {
-    margin-bottom: 6px;
-    font-size: 20px;
-    line-height: 24px;
-  }
-
-  .card__description {
-    font-size: 15px;
-  }
-
-  .card__price {
-    font-size: 17px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .card__border-box {
-    padding: 27px 32px 26px 28px;
-  }
 }
 
 .card__img {

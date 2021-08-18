@@ -1,15 +1,16 @@
 .form__container {
+  margin-bottom: 30px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 50px;
   }
 }
 
 .form__color-box {
-  background-color: @color-back;
-  padding-top: 50px;
-  padding-bottom: 50px;
-
   @media (min-width: @tablet-width) {
+    background-color: @color-back;
+    padding-top: 50px;
+    padding-bottom: 50px;
     margin-bottom: 50px;
 
     .form__container {
@@ -31,6 +32,25 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @color-accent1;
+
+  @media (max-width: @only-mobile-width) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 60px;
+      height: 1px;
+      width: 200px;
+      background-color: @color-accent1;
+    }
+
+    &--email::before {
+      left: 78px;
+      width: 182px;
+    }
+  }
 }
 
 .form__list {
@@ -44,6 +64,78 @@
 
   @media (min-width: @tablet-width) {
     font-size: 19px;
+  }
+}
+
+.form__radio {
+  .hidden;
+
+  & + .form__label {
+    position: relative;
+  }
+
+  & + .form__label::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    background-color: @color-white;
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 11px @color-white,
+      0 0 0 13px @color-text;
+  }
+
+  & + .form__label:hover::before,
+  & + .form__label:focus::before {
+    box-shadow:
+      0 0 0 11px @color-white,
+      0 0 0 13px @underline;
+  }
+
+  & + .form__label:active::before {
+    box-shadow:
+      0 0 0 11px @color-white,
+      0 0 0 13px rgba(@color-black-rgb, 0.3);
+  }
+
+  &:checked + .form__label::before {
+    background-color: @underline;
+  }
+}
+
+.form__checkbox {
+  .hidden;
+
+  & + .form__label {
+    position: relative;
+  }
+
+  & + .form__label::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 38px;
+    height: 38px;
+    background-color: transparent;
+    background-image: none;
+    border: 2px solid @color-text;
+  }
+
+  & + .form__label:hover::before,
+  & + .form__label:focus::before {
+    border-color: @underline;
+  }
+
+  & + .form__label:active::before {
+    border-color: rgba(@color-black-rgb, 0.3);
+  }
+
+  &:checked + .form__label::before {
+    background-image: url("../img/icon/tick.svg");
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 

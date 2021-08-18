@@ -1,6 +1,10 @@
 .contact {
   margin-bottom: 38px;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
+
   @media (min-width: @desktop-width) {
     .limiter;
     margin-bottom: 105px;
@@ -18,6 +22,17 @@
     }
   }
 
+  &--map {
+    margin-bottom: 45px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 55px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+    }
+  }
 
   @media (min-width: @desktop-width) {
     &--info {
@@ -41,6 +56,35 @@
 .contact__title {
   margin: 0;
   margin-bottom: 28px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 49px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -22px;
+      right: 3px;
+      width: 47px;
+      height: 81px;
+      background-image: url("../img/icon/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 79px;
+    margin-bottom: 34px;
+
+    &::after {
+      right: 0;
+      top: -18px;
+      left: -110px;
+      background-image: url("../img/icon/icon-flag.svg");
+    }
+  }
 }
 
 .contact__info {
@@ -56,20 +100,34 @@
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
+    margin-bottom: 49px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    dd {
+      margin-left: 25px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     display: block;
+    margin-bottom: 0;
   }
 }
 
 .contact__info-box {
   display: flex;
 
-  &:not(:last-child) {
+  &--email {
     margin-bottom: 30px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -100,7 +158,6 @@
 .contact__map {
   display: block;
   width: 100%;
-  margin-bottom: 42px;
 }
 
 .contact__write {
