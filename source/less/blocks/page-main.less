@@ -2,9 +2,17 @@
   background-color: @color-back;
   margin-bottom: 30px;
 
+  &--smaller-margin {
+    margin-bottom: 18px;
+  }
+
   @media (min-width: @tablet-width) {
     margin-bottom: 79px;
     position: relative;
+
+    &--smaller-margin {
+      margin-bottom: 68px;
+    }
 
     &::after {
       content: "";
