@@ -1,9 +1,22 @@
 .form__color-box {
   @media (min-width: @tablet-width) {
     background-color: @color-back;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-bottom: 50px;
+
+    &--color {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      margin-bottom: 50px;
+    }
+
+    &--phone {
+      padding-top: 50px;
+      padding-bottom: 24px;
+    }
+
+    &--email {
+      padding-bottom: 50px;
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -20,16 +33,16 @@
     margin-bottom: 34px;
   }
 
-  &--contacts {
+  &--phone {
     margin-bottom: 35px;
+  }
 
-    .form__unit--phone {
-      margin-bottom: 35px;
-    }
+  &--email {
+    margin-bottom: 35px;
   }
 
   &--message {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
   }
 
   &--send-order {
@@ -239,7 +252,8 @@
 .form__tel {
   box-sizing: border-box;
   width: 100%;
-  padding: 15px 3px 14px 0;
+  height: 52px;
+  padding: 17px 3px 17px 0;
   font-size: 17px;
   line-height: 18px;
   color: @color-text;
@@ -327,7 +341,7 @@
 
   &--type-selection {
     .form__subject {
-      margin-bottom: 35px;
+      padding-bottom: 35px;
     }
 
     .form__item:not(:last-child) {
@@ -341,7 +355,7 @@
 
   &--color-selection {
     .form__subject {
-      margin-bottom: 25px;
+      padding-bottom: 25px;
     }
 
     .form__item:not(:last-child) {
@@ -356,7 +370,7 @@
 
   &--personal-name {
     .form__subject {
-      margin-bottom: 27px;
+      padding-bottom: 27px;
     }
 
     .form__item:not(:last-child) {
@@ -366,19 +380,19 @@
 
   &--phone {
     .form__subject {
-      margin-bottom: 4px;
+      padding-bottom: 4px;
     }
   }
 
   &--email {
     .form__subject {
-      margin-bottom: 5px;
+      padding-bottom: 5px;
     }
   }
 
   &--message {
     .form__subject {
-      margin-bottom: 23px;
+      padding-bottom: 23px;
     }
 
     .form__message {
@@ -407,12 +421,12 @@
       margin-bottom: 48px;
     }
 
-    &--contacts {
+    &--phone {
       margin-bottom: 0;
+    }
 
-      .form__unit--phone {
-        margin-bottom: 24px;
-      }
+    &--email {
+      margin-bottom: 0;
     }
 
     &--message {
@@ -422,7 +436,7 @@
 
   .form__unit {
     .form__subject {
-      margin-bottom: 0;
+      padding-bottom: 0;
       padding-top: 18px;
     }
 
@@ -494,7 +508,7 @@
       }
 
       .form__item:not(:last-child) {
-        margin-bottom: 21px;
+        margin-bottom: 25px;
       }
 
       .form__label {
@@ -512,7 +526,8 @@
       }
 
       .form__wrapper {
-        margin-top: -36px;
+        height: 52px;
+        margin-top: -32px;
         grid-column: ~"2/-1";
       }
     }
@@ -526,6 +541,7 @@
       }
 
       .form__wrapper {
+        height: 52px;
         margin-top: -36px;
         grid-column: ~"2/-1";
       }
@@ -540,7 +556,7 @@
       }
 
       .form__message {
-        margin-top: -36px;
+        margin-top: -33px;
         grid-column: ~"2/-1";
       }
     }
