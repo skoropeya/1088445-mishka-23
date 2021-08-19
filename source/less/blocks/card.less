@@ -6,11 +6,15 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0 6px 10px rgba(@color-black-rgb, 0.1);
+    .card__border-box {
+      box-shadow: 0 6px 10px rgba(@color-black-rgb, 0.1);
+    }
   }
 
   &:active {
-    box-shadow: 0 3px 5px rgba(@color-black-rgb, 0.1);
+    .card__border-box {
+      box-shadow: 0 3px 5px rgba(@color-black-rgb, 0.1);
+    }
   }
 
   @media (min-width: @tablet-width) {
