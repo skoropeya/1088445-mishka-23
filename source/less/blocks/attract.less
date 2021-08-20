@@ -2,9 +2,14 @@
   padding-top: 73px;
   margin-bottom: 30px;
   background-color: @and-again-grey;
-  background-image: url("../img/attract-bg-1.jpg");
+  background-image: url("../img/attract-bg.jpg");
   background-repeat: no-repeat;
   background-position: 50% -15%;
+  background-size: 320px auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/attract-bg@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 110px;

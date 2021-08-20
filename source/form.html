@@ -17,7 +17,11 @@
   <header class="page-header">
     <div class="page-header__container container">
       <a class="page-header__link-logo" href="index.html">
-        <img class="page-header__logo" src="./img/mishka-logo-1.svg" width="86" height="35" alt="Логотип магазина Мишка">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="./img/mishka-logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/mishka-logo-tablet.svg">
+          <img class="page-header__logo" src="./img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+        </picture>
       </a>
 
       <nav class="page-header__nav main-nav main-nav--no-js main-nav--inner">
