@@ -1,55 +1,3 @@
-.form__color-box {
-  @media (min-width: @tablet-width) {
-    background-color: @color-back;
-
-    &--color {
-      padding-top: 50px;
-      padding-bottom: 50px;
-      margin-bottom: 50px;
-    }
-
-    &--phone {
-      padding-top: 50px;
-      padding-bottom: 24px;
-    }
-
-    &--email {
-      padding-bottom: 50px;
-      margin-bottom: 50px;
-    }
-  }
-}
-
-.form__container {
-  &--type {
-    margin-bottom: 42px;
-  }
-
-  &--color {
-    margin-bottom: 34px;
-  }
-
-  &--personal {
-    margin-bottom: 34px;
-  }
-
-  &--phone {
-    margin-bottom: 35px;
-  }
-
-  &--email {
-    margin-bottom: 35px;
-  }
-
-  &--message {
-    margin-bottom: 13px;
-  }
-
-  &--send-order {
-    margin-bottom: 0;
-  }
-}
-
 .form__subject {
   font-weight: bold;
   line-height: 16px;
@@ -209,7 +157,7 @@
   }
 }
 
-.form__wrapper {
+.form__box {
   position: relative;
 }
 
@@ -286,6 +234,7 @@
 
 .form__message {
   box-sizing: border-box;
+  display: block;
   width: 100%;
   padding: 15px;
   font-size: 17px;
@@ -340,6 +289,8 @@
   border: none;
 
   &--type-selection {
+    margin-bottom: 43px;
+
     .form__subject {
       padding-bottom: 35px;
     }
@@ -354,6 +305,8 @@
   }
 
   &--color-selection {
+    margin-bottom: 33px;
+
     .form__subject {
       padding-bottom: 25px;
     }
@@ -369,8 +322,10 @@
   }
 
   &--personal-name {
+    margin-bottom: 34px;
+
     .form__subject {
-      padding-bottom: 27px;
+      padding-bottom: 28px;
     }
 
     .form__item:not(:last-child) {
@@ -378,19 +333,21 @@
     }
   }
 
-  &--phone {
-    .form__subject {
-      padding-bottom: 4px;
-    }
-  }
+  &--contacts {
+    margin-bottom: 34px;
 
-  &--email {
-    .form__subject {
-      padding-bottom: 5px;
+    .form__wrapper--phone {
+      margin-bottom: 34px;
+    }
+
+    .form__box {
+      margin-top: 2px;
     }
   }
 
   &--message {
+    margin-bottom: 15px;
+
     .form__subject {
       padding-bottom: 23px;
     }
@@ -402,56 +359,43 @@
 
   &--send-order {
     .form__note {
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
   }
 }
 
 @media (min-width: @tablet-width) {
-  .form__container {
-    &--type {
-      margin-bottom: 67px;
-    }
-
-    &--color {
-      margin-bottom: 0;
-    }
-
-    &--personal {
-      margin-bottom: 48px;
-    }
-
-    &--phone {
-      margin-bottom: 0;
-    }
-
-    &--email {
-      margin-bottom: 0;
-    }
-
-    &--message {
-      margin-bottom: 53px;
-    }
-  }
-
   .form__unit {
+    position: relative;
+    padding-left: 167px;
+
     .form__subject {
+      position: absolute;
       padding-bottom: 0;
-      padding-top: 18px;
+      left: 0;
+      top: 0;
+    }
+
+    &--color-box {
+      position: relative;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      margin-bottom: 50px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 200vw;
+        background-color: @color-back;
+      }
     }
 
     &--type-selection {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-
-      .form__subject {
-        grid-column: ~"1/2";
-      }
-
-      .form__list {
-        margin-top: -18px;
-        grid-column: ~"2/-1";
-      }
+      margin-bottom: 67px;
 
       .form__item:not(:last-child) {
         margin-bottom: 58px;
@@ -463,19 +407,14 @@
     }
 
     &--color-selection {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-
       .form__subject {
-        grid-column: ~"1/2";
+        top: 65px;
       }
 
       .form__list {
-        margin-top: -36px;
-        grid-column: ~"2/-1";
         display: grid;
         grid-template-columns: 1fr 1fr;
-        row-gap: 25px;
+        row-gap: 24px;
         column-gap: 21px;
       }
 
@@ -490,16 +429,10 @@
     }
 
     &--personal-name {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 48px;
 
       .form__subject {
-        grid-column: ~"1/2";
-      }
-
-      .form__list {
-        margin-top: -36px;
-        grid-column: ~"2/-1";
+        top: 18px;
       }
 
       .form__item {
@@ -508,7 +441,7 @@
       }
 
       .form__item:not(:last-child) {
-        margin-bottom: 25px;
+        margin-bottom: 24px;
       }
 
       .form__label {
@@ -517,51 +450,32 @@
       }
     }
 
-    &--phone {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+    &--contacts {
+      .form__wrapper {
+        position: relative;
+
+        &--phone {
+          margin-bottom: 24px;
+        }
+      }
 
       .form__subject {
-        grid-column: ~"1/2";
-      }
-
-      .form__wrapper {
-        height: 52px;
-        margin-top: -32px;
-        grid-column: ~"2/-1";
-      }
-    }
-
-    &--email {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-
-      .form__subject {
-        grid-column: ~"1/2";
-      }
-
-      .form__wrapper {
-        height: 52px;
-        margin-top: -36px;
-        grid-column: ~"2/-1";
+        top: 16px;
+        left: -167px;
       }
     }
 
     &--message {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 53px;
 
       .form__subject {
-        grid-column: ~"1/2";
-      }
-
-      .form__message {
-        margin-top: -33px;
-        grid-column: ~"2/-1";
+        top: 16px;
       }
     }
 
     &--send-order {
+      padding-left: 0;
+      position: static;
       display: grid;
       grid-template-columns: 1fr 1fr;
 
@@ -583,28 +497,18 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form__container {
-    &--message {
-      margin-bottom: 50px;
-    }
-  }
-
   .form__unit {
+    padding-left: 175px;
+
     .form__subject {
-      padding-left: 60px;
+      left: 61px;
     }
 
     &--type-selection {
-      grid-template-columns: repeat(6, 1fr);
-
-      .form__list {
-        grid-column: ~"2/-2";
-      }
+      margin-bottom: 66px;
     }
 
     &--color-selection {
-      grid-template-columns: repeat(6, 1fr);
-
       .form__list {
         grid-template-columns: 240px 240px 1fr;
         column-gap: 22px;
@@ -612,38 +516,24 @@
     }
 
     &--personal-name {
-      grid-template-columns: repeat(6, 1fr);
-
-      .form__list {
-        grid-column: ~"2/-2";
-      }
+      padding-right: 175px;
     }
 
-    &--phone {
-      grid-template-columns: repeat(6, 1fr);
+    &--contacts {
+      padding-right: 175px;
 
-      .form__wrapper {
-        grid-column: ~"2/-2";
-      }
-    }
-
-    &--email {
-      grid-template-columns: repeat(6, 1fr);
-
-      .form__wrapper {
-        grid-column: ~"2/-2";
+      .form__subject {
+        left: -113px;
       }
     }
 
     &--message {
-      grid-template-columns: repeat(6, 1fr);
-
-      .form__message {
-        grid-column: ~"2/-2";
-      }
+      padding-right: 175px;
+      margin-bottom: 49px;
     }
 
     &--send-order {
+      padding-left: 0;
       grid-template-columns: repeat(6, 1fr);
 
       .form__note {
