@@ -49,7 +49,7 @@
   & + .form__label::before {
     content: "";
     position: absolute;
-    top: 7px;
+    top: 17px;
     left: 11px;
     box-sizing: border-box;
     width: 16px;
@@ -62,7 +62,7 @@
   }
 
   & + .form__label--kids-toy::before {
-    top: 0;
+    top: 10px;
   }
 
   & + .form__label:hover::before,
@@ -84,7 +84,7 @@
 
   @media (min-width: @tablet-width) {
     & + .form__label::before {
-      top: 0;
+      top: 15px;
       left: 16px;
       width: 20px;
       height: 20px;
@@ -289,17 +289,18 @@
   border: none;
 
   &--type-selection {
-    margin-bottom: 43px;
+    margin-bottom: 32px;
 
     .form__subject {
-      padding-bottom: 35px;
+      padding-bottom: 25px;
     }
 
     .form__item:not(:last-child) {
-      margin-bottom: 24px;
+      margin-bottom: 4px;
     }
 
     .form__label {
+      padding: 10px;
       padding-left: 60px;
     }
   }
@@ -395,13 +396,18 @@
     }
 
     &--type-selection {
-      margin-bottom: 67px;
+      margin-bottom: 50px;
+
+      .form__subject {
+        top: 17px;
+      }
 
       .form__item:not(:last-child) {
-        margin-bottom: 58px;
+        margin-bottom: 23px;
       }
 
       .form__label {
+        padding: 17px;
         padding-left: 80px;
       }
     }
@@ -502,10 +508,6 @@
 
     .form__subject {
       left: 61px;
-    }
-
-    &--type-selection {
-      margin-bottom: 66px;
     }
 
     &--color-selection {
