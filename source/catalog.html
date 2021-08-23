@@ -18,9 +18,9 @@
     <div class="page-header__container container">
       <a class="page-header__link-logo" href="index.html">
         <picture>
-          <source media="(min-width: 1150px)" srcset="./img/mishka-logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="./img/mishka-logo-tablet.svg">
-          <img class="page-header__logo" src="./img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+          <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+          <img class="page-header__logo" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
         </picture>
       </a>
 
@@ -177,7 +177,11 @@
             <a class="process__order button button--higher" href="#">Сделать заказ</a>
           </div>
           <figure class="process__video video-demo">
-            <img class="video-demo__preview" src="./img/video-1.jpg" width="260" height="150" alt="Превью видеоролика о производстве">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img class="video-demo__preview" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Превью видеоролика о производстве">
+            </picture>
             <button class="video-demo__play"><span class="visually-hidden">Смотреть видео</span></button>
           </figure>
         </div>

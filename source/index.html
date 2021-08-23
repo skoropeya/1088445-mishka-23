@@ -18,9 +18,9 @@
     <div class="page-header__container container">
       <a class="page-header__link-logo">
         <picture>
-          <source media="(min-width: 1150px)" srcset="./img/mishka-logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="./img/mishka-logo-tablet.svg">
-          <img class="page-header__logo" src="./img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+          <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+          <img class="page-header__logo" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
         </picture>
       </a>
 
@@ -147,7 +147,16 @@
                 <dd class="product__height-value">15 см</dd>
               </div>
             </dl>
-            <img class="product__image" src="./img/triple-set-mobile.png" width="260" height="315" alt="Три вязаные корзинки разных размеров">
+            <img class="product__image"
+            src="img/triple-set-mobile.png"
+            srcset="img/triple-set-mobile.png 260w,
+                    img/triple-set-mobile@2x.png 520w,
+                    img/triple-set-tablet.png 334w,
+                    img/triple-set-tablet@2x.png 668w,
+                    img/triple-set-desktop.png 525w,
+                    img/triple-set-desktop@2x.png 1050w"
+            sizes="(max-width: 768px) 260px, (max-width: 1150px) 334px, 525px"
+            alt="Три вязаные корзинки разных размеров">
             <p class="product__price">Цена: 990 руб.</p>
             <a class="product__make-order button" href="#">Заказать</a>
           </div>
