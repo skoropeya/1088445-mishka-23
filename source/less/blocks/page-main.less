@@ -2,9 +2,17 @@
   background-color: @color-back;
   margin-bottom: 30px;
 
+  &--smaller-margin {
+    margin-bottom: 18px;
+  }
+
   @media (min-width: @tablet-width) {
     margin-bottom: 79px;
     position: relative;
+
+    &--smaller-margin {
+      margin-bottom: 68px;
+    }
 
     &::after {
       content: "";
@@ -15,17 +23,21 @@
       background-image: url("../img/zigzag-fill-pattern.svg");
       background-repeat: repeat-x;
       background-position-x: center;
-      background-size: 76px 24px;
+      background-size: 77px 24px;
     }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 127px;
 
+    &--smaller-margin {
+      margin-bottom: 115px;
+    }
+
     &::after {
       bottom: -17px;
       height: 34px;
-      background-size: 124px 34px;
+      background-size: 115px 34px;
     }
   }
 }

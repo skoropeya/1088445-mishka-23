@@ -1,21 +1,24 @@
+.knitting {
+  margin-bottom: 55px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+    overflow: hidden;
+  }
+}
+
 .knitting__slogan {
   margin: 0;
   color: @color-text;
-}
-
-.knitting__container--slogan {
-  margin-top: -12px;
   margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 63px;
   }
-}
 
-.knitting__form {
-  margin-bottom: 55px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 50px;
+  @media (min-width: @desktop-width) {
+    width: 700px;
+    padding-left: 175px;
+    margin-bottom: 63px;
   }
 }

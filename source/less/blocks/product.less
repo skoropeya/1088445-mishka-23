@@ -71,6 +71,7 @@
   margin-bottom: 25px;
   width: 260px;
   height: 315px;
+  object-fit: contain;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -104,6 +105,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: -15px;
     grid-column: ~"2/4";
     grid-row: ~"2/3";
   }
@@ -126,7 +128,7 @@
   @media (min-width: @desktop-width) {
     grid-column: ~"2/4";
     grid-row: ~"3/4";
-    margin-top: 5px;
+    margin-top: -5px;
   }
 }
 
@@ -157,12 +159,13 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     width: 292px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     grid-area: price;
     align-self: flex-end;
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: -20px;
     grid-column: ~"2/4";
     grid-row: ~"4/5";
   }

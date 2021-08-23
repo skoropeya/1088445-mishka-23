@@ -41,11 +41,19 @@
   }
 }
 
-.page-footer__logo {
+.page-footer__link {
   display: block;
+}
 
-  img {
-    display: block;
+.page-footer__logo {
+  &:hover path,
+  &:focus path {
+    fill: @mail-hover;
+  }
+
+  &:active path {
+    fill: @mail-hover;
+    opacity: 0.3;
   }
 }
 
