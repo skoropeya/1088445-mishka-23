@@ -25,6 +25,7 @@
   width: 23px;
   height: 28px;
   text-align: center;
+  color: @color-black;
 
   .social__icon {
     vertical-align: middle;
@@ -32,18 +33,11 @@
 
   &:hover,
   &:focus {
-    path {
-      fill: @mail-hover;
-    }
+    color: @mail-hover;
   }
 
   &:active {
-    .social__icon {
-      opacity: 0.3;
-    }
-
-    path {
-      fill: @mail-hover;
-    }
+    color: @mail-hover;
+    opacity: 0.3;
   }
 }

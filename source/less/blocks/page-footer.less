@@ -43,16 +43,15 @@
 
 .page-footer__link {
   display: block;
-}
+  color: @color-black;
 
-.page-footer__logo {
-  &:hover path,
-  &:focus path {
-    fill: @mail-hover;
+  &:hover,
+  &:focus {
+    color: @mail-hover;
   }
 
-  &:active path {
-    fill: @mail-hover;
+  &:active {
+    color: @mail-hover;
     opacity: 0.3;
   }
 }
