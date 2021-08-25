@@ -251,8 +251,18 @@
       </div>
 
       <div class="contact__container contact__container--map">
-        <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3050922002319!2d30.322103261212337!3d59.9386103382364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1627546967634!5m2!1sru!2sru" height="454" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
-        <!-- <img class="contact__map" src="./img/map-1@1x.png" alt="Адрес магазина на карте г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101"> -->
+        <div class="contact__img-box">
+          <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+            <source media="(min-width: 1150px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+            <img class="contact__map-img" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="320" height="454" alt="Адрес магазина на карте г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
+          </picture>
+        </div>
+        <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3050922002319!2d30.322103261212337!3d59.9386103382364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1627546967634!5m2!1sru!2sru" height="454" style="border: 0;" allowfullscreen="" loading="lazy">
+        </iframe>
       </div>
 
       <div class="contact__container contact__container--btn">
