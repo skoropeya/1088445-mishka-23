@@ -153,16 +153,16 @@
                 <dd class="product__height-value">15 см</dd>
               </div>
             </dl>
-            <img class="product__image"
-            src="img/triple-set-mobile.png"
-            srcset="img/triple-set-mobile.png 260w,
-                    img/triple-set-mobile@2x.png 520w,
-                    img/triple-set-tablet.png 334w,
-                    img/triple-set-tablet@2x.png 668w,
-                    img/triple-set-desktop.png 525w,
-                    img/triple-set-desktop@2x.png 1050w"
-            sizes="(max-width: 768px) 260px, (max-width: 1150px) 334px, 525px"
-            alt="Три вязаные корзинки разных размеров">
+            <div class="product__image-box">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet.webp 1x, img/triple-set-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/triple-set-mobile.webp 1x, img/triple-set-mobile@2x.webp 2x">
+                <source media="(min-width: 1150px)" srcset="img/triple-set-desktop.png 1x, img/triple-set-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/triple-set-tablet.png 1x, img/triple-set-tablet@2x.png 2x">
+                <img class="product__image" src="img/triple-set-mobile.png" srcset="img/triple-set-mobile@2x.png 2x" width="260" height="315" alt="Три вязаные корзинки разных размеров">
+              </picture>
+            </div>
             <p class="product__price">Цена: 990 руб.</p>
             <a class="product__make-order button" href="#">Заказать</a>
           </div>
