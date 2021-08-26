@@ -110,27 +110,38 @@
   display: block;
   width: 20px;
   height: 19px;
+  padding: 0;
   background-color: transparent;
-  background-image: url("../img/icon/icon-cart.svg");
-  background-position: center;
-  background-repeat: no-repeat;
   border: none;
   cursor: pointer;
+}
+
+.card__icon-cart {
+  color: @color-black;
+  opacity: 0.2;
+
+  .card__add-cart:hover &,
+  .card__add-cart:focus & {
+    color: @color-accent1;
+    opacity: 1;
+  }
+
+  .card__add-cart:active & {
+    color: @color-accent1;
+    opacity: 0.3;
+  }
 }
 
 .card__img {
   display: block;
   width: 260px;
-  height: 195px;
   object-fit: contain;
 
   @media (min-width: @tablet-width) {
     width: 334px;
-    height: 334px;
   }
 
   @media (min-width: @desktop-width) {
     width: 315px;
-    height: 462px;
   }
 }

@@ -24,6 +24,7 @@
 
   &--map {
     margin-bottom: 45px;
+    display: grid;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 55px;
@@ -158,6 +159,29 @@
 .contact__map {
   display: block;
   width: 100%;
+  grid-column: ~"1/2";
+  grid-row: ~"1/2";
+}
+
+.contact__img-box {
+  grid-column: ~"1/2";
+  grid-row: ~"1/2";
+
+  img {
+    display: block;
+    width: 100%;
+    height: 454px;
+    object-fit: cover;
+
+    @media (min-width: @tablet-width) {
+      height: 457px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 527px;
+      height: auto;
+    }
+  }
 }
 
 .contact__write {

@@ -43,20 +43,31 @@
 
 .page-footer__link {
   display: block;
-}
+  color: @color-black;
 
-.page-footer__logo {
-  &:hover path,
-  &:focus path {
-    fill: @mail-hover;
+  &:hover,
+  &:focus {
+    color: @mail-hover;
   }
 
-  &:active path {
-    fill: @mail-hover;
+  &:active {
+    color: @mail-hover;
     opacity: 0.3;
   }
 }
 
 .page-footer__social {
   margin: 0;
+  margin-top: 4px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-bottom: 13px;
+  }
+}
+
+.page-footer__copyright {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 8px;
+  }
 }
