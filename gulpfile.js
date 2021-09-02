@@ -151,6 +151,8 @@ const watcher = () => {
   gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/img/icon-sprite/*.svg", gulp.series(sprite));
   gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/img/**/*.{jpg,png,svg}", gulp.series(copyImages));
+  gulp.watch(["source/img/**/*.{jpg,png}", "!source/img/background/*.{jpg,png}"], gulp.series(createWebp));
 }
 
 // build
@@ -165,8 +167,7 @@ const build = gulp.series(
     scripts,
     createWebp,
     sprite
-  ),
-  server
+  )
 );
 
 exports.build = build;
