@@ -66,13 +66,13 @@
   }
 
   & + .form__label:hover::before,
-  & + .form__label:focus::before {
+  &:focus + .form__label::before {
     box-shadow:
       0 0 0 11px @color-white,
       0 0 0 13px @underline;
   }
 
-  & + .form__label:active::before {
+  &:active + .form__label::before {
     box-shadow:
       0 0 0 11px @color-white,
       0 0 0 13px rgba(@color-black-rgb, 0.3);
@@ -94,13 +94,13 @@
     }
 
     & + .form__label:hover::before,
-    & + .form__label:focus::before {
+    &:focus + .form__label::before {
       box-shadow:
         0 0 0 13px @color-white,
         0 0 0 15px @underline;
     }
 
-    & + .form__label:active::before {
+    &:active + .form__label::before {
       box-shadow:
         0 0 0 13px @color-white,
         0 0 0 15px rgba(@color-black-rgb, 0.3);
@@ -129,11 +129,11 @@
   }
 
   & + .form__label:hover::before,
-  & + .form__label:focus::before {
+  &:focus + .form__label::before {
     border-color: @underline;
   }
 
-  & + .form__label:active::before {
+  &:active + .form__label::before {
     border-color: rgba(@color-black-rgb, 0.3);
   }
 
