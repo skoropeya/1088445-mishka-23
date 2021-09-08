@@ -1,35 +1,12 @@
 .reviews {
-  position: relative;
   margin-bottom: 89px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -51px;
-    width: 100%;
-    height: 6px;
-    background-image: url("../img/zigzag-pattern.svg");
-    background-repeat: repeat-x;
-    background-position-x: center;
-  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 155px;
-
-    &::after {
-      bottom: -86px;
-      height: 17px;
-      background-size: 77px 17px;
-    }
   }
 
   @media (min-width: @desktop-width) {
-    position: static;
     margin-bottom: 161px;
-
-    &::after {
-      display: none;
-    }
   }
 }
 
@@ -51,31 +28,43 @@
 }
 
 .reviews__wrapper {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -51px;
+    width: 100%;
+    height: 6px;
+    background-image: url("../img/zigzag-pattern.svg");
+    background-repeat: repeat-x;
+    background-position-x: center;
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 82px;
     padding-bottom: 47px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, min-content);
+
+    &::after {
+      bottom: -86px;
+      height: 17px;
+      background-size: 77px 17px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 78px;
     padding-bottom: 96px;
     grid-template-columns: repeat(6, 1fr);
-    position: relative;
+
 
     &::after {
-      content: "";
-      position: absolute;
       bottom: -97px;
-      width: 100%;
       height: 29px;
-      background-image: url("../img/zigzag-pattern.svg");
-      background-repeat: repeat-x;
-      background-position-x: left;
       background-size: 105px 23px;
     }
   }
