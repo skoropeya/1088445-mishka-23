@@ -18,10 +18,15 @@
 
 .form-size__list {
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 25px;
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+}
+
+.form-size__item {
+  margin-bottom: 6px;
 }
 
 .form-size__item:not(:last-child) {
@@ -64,6 +69,7 @@
 }
 
 .form-size__add {
+  align-self: stretch;
   padding: 18px;
   font-weight: bold;
   font-size: 17px;
@@ -79,5 +85,10 @@
   &:focus,
   &:active {
     background-color: @color-accent2;
+  }
+
+  @media (min-width: @tablet-width) {
+    align-self: center;
+    width: 350px;
   }
 }
