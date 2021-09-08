@@ -9,6 +9,11 @@
   font-size: 15px;
   line-height: 30px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 19px;
+    font-size: 17px;
+  }
 }
 
 .form-size__list {
@@ -35,6 +40,7 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
+  color: @color-text;
   text-align: center;
   text-transform: uppercase;
   border: 2px solid rgba(@color-text-rgb, 0.1);
@@ -46,6 +52,10 @@
 
   &:active {
     border-color: @color-accent1;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 112px;
   }
 }
 
