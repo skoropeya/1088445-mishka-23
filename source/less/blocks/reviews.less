@@ -1,6 +1,36 @@
 .reviews {
-  position: relative;
   margin-bottom: 89px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 155px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 161px;
+  }
+}
+
+.reviews__container {
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/background/back-review.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/back-review@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 50px top;
+  }
+}
+
+.reviews__wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
 
   &::after {
     content: "";
@@ -14,7 +44,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 155px;
+    padding-top: 82px;
+    padding-bottom: 47px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, min-content);
 
     &::after {
       bottom: -86px;
@@ -24,58 +57,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: static;
-    margin-bottom: 161px;
-
-    &::after {
-      display: none;
-    }
-  }
-}
-
-.reviews__container {
-  @media (min-width: @tablet-width) {
-    background-image: url("../img/background/back-review.jpg");
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 350px auto;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/background/back-review@2x.jpg");
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    background-position: 50px top;
-  }
-}
-
-.reviews__wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 82px;
-    padding-bottom: 47px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, min-content);
-  }
-
-  @media (min-width: @desktop-width) {
     padding-top: 78px;
     padding-bottom: 96px;
     grid-template-columns: repeat(6, 1fr);
-    position: relative;
+
 
     &::after {
-      content: "";
-      position: absolute;
       bottom: -97px;
-      width: 100%;
       height: 29px;
-      background-image: url("../img/zigzag-pattern.svg");
-      background-repeat: repeat-x;
-      background-position-x: left;
       background-size: 105px 23px;
     }
   }
